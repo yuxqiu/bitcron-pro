@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh">
+  <%- include('./_blocks/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
+  </head>
+
+  <body>
+ <%- include('./_blocks/header') %>
+
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+
+
+<div class="content">
+
+
+
+
+
+
+  <div class="post_page" >
+
+<div class="post">
+  <div class="post_title sm_margin">
+    <h2><a><%= post.title %></a>
+
+
+
+    </h2>
+  </div>
+  
+<script>
+function lan(){
+	if (document.getElementById("lan").innerText == "繁"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_tw.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "简"
+	}
+	else if(document.getElementById("lan").innerText == "簡"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_cn.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "繁"
+		}
+}
+
+function change(){	
+    var rand = Math.random()*1+1;
+    var num = window.getComputedStyle(document.getElementsByName("show")[0],undefined).fontSize;
+	num = num.slice(0,-2); 
+    document.getElementById("show").style.fontSize = num - rand +'px';
+}
+</script>
+
+  <div class="post_details">
+    <div class="info"><i class="fa fa-clock-o"></i>
+<span class="date_info"><%= post.dateFormat %></span>
+<i class="fa fa-eye"></i>
+
+<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
+
+<i class="fa fa-bookmark-o"></i>
+<span class="tags_info weaklink">
+	<% post.tags.forEach(function(tag) { %>
+	<a href="<%= tag.link %>" class="tag"><%= tag.name %></a>
+<% }); %>
+
+</span>
+<i class="fa fa-pencil"></i>
+<span id="fn">
+</span>
+&nbsp
+&nbsp
+<i class="fa fa-clock-o"></i>
+<span id="read_time"></span>
+&nbsp
+&nbsp
+<i class="fa fa-share"></i>
+<a title="QR code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<%= post.link %>"><i class="fa fa-qrcode"></i></a>
+<a title="qq share" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<%= post.link %>&sharesource=qzone&title=<%= post.title %>&pics=https://blog.blinkstar.cn/images/avatar.png&summary=<%= post.abstract %>"><i class="fa fa-qq"></i></a>
+<a title="weibo share" target="_blank" href="https://service.weibo.com/share/share.php?url=<%= post.link %>&sharesource=weibo&title=<%= post.title%> + " - " + <%= post.abstract %>&pic="https://blog.blinkstar.cn/images/avatar.png"><i class="fa fa-weibo"></i></a>
+&nbsp
+&nbsp
+<a id="daxiao" href="javascript:void(0);" onclick="change();" title="调整字体大小"><i class="fa fa-font"></i></a>
+&nbsp
+&nbsp
+<a id="lan" href="javascript:void(0);" onclick="lan();" title="调整简繁体">繁</a>
+</div>
+  </div>
+
+  <div class="post_content markdown">
+  &nbsp
+  <img id="mememe" src="https://source.unsplash.com/800x400/?arts,weather">
+    <div name="show" id="show">
+	<p class="md_block"><span class="md_line md_line_start md_line_end"><%- post.content %></span></p></div>
+	<br>
+	<hr>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/">Serence</a>创作</div>	
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-cc"></i>该文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处！</div>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-clock-o"></i>发布时间为：<%= post.dateFormat %></div>    
+	 <p class="md_block">
+    <div class="reward"><div class="reward-button">赏 <span class="reward-code"> <span class="alipay-code"> <img class="alipay-img" src="<%= themeConfig.domain %>/media/images/alipay.png"><b>支付宝扫码打赏</b> </span> <span class="wechat-code"> <img class="wechat-img" src="<%= themeConfig.domain %>/media/images/wechat.png"><b>微信打赏</b> </span> </span></div></div>
+<div style="text-align:center;color: #ccc;font-size:14px;">如果觉得这篇文章对您有帮助，可以请作者喝一杯饮料哦🥤</div>    
+</p> 
+</div>
+</div>
+
+
+<script>
+var data=document.getElementById("show").innerText
+var pattern = /[a-zA-Z0-9_\u0392-\u03c9]+|[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af]+/g;
+var m =data.match(pattern);
+var count = 0;
+if(m==null){
+document.getElementById("fn").innerHTML = count + "字"
+document.getElementById("read_time").innerHTML = '0 min read'
+}
+else{
+for(var i=0;i<m.length;i++){
+	if(m[i].charCodeAt(0)>=0x4E00){
+		count +=m[i].length;
+	}else{
+		count += 1;
+	}
+}
+
+var readTime = count / 250;
+var readTime = Math.round(readTime);
+if(readTime > 1){
+    document.getElementById("read_time").innerHTML = readTime + " min read"
+}else{
+    document.getElementById("read_time").innerHTML = '1 min read'
+}
+document.getElementById("fn").innerHTML = count + "字"
+}
+</script>
+
+<style type="text/css">
+#mememe {
+	border:3px;
+	border-radius:5px;
+    background-repeat: no-repeat;
+    height: 100%;
+	width: 100%;
+	display: inline-block;
+	border-radius:5px; 
+}
+</style>
+
+<script>
+var link = "" ;
+$("img").each( (i,o) => {
+	var o = $(o);
+	if( o.attr("src").indexOf("sinaimg") > 0 || o.attr("src").indexOf("qpic") > 0 || o.attr("src").indexOf("baidu") > 0 || o.attr("src").indexOf("sinaimg") > 0){
+		o.attr("referrerpolicy","no-referrer");
+		link = o.attr("src");
+		o.attr("src",link);
+	}
+});
+</script>
+
+<div style="width:100%;overflow:hidden">
+<% if (post.nextPost && !post.hideInList) { %>
+          <div style="float:right;text-align:right;color:#ccc;font-size:18px;width:50%;">
+            下一篇
+            <a href="<%= post.nextPost.link %>/">
+              <h3 class="post-title">
+                <%= post.nextPost.title %>
+              </h3>
+            </a>
+          </div>
+<% } %>
+
+<% if (post.prevPost && !post.hideInList) { %>
+          <div style="float:left;text-align:left;color:#ccc;font-size:18px;width:50%;">
+            上一篇
+            <a href="<%= post.prevPost.link %>/">
+              <h3 class="post-title">
+                <%= post.prevPost.title %>
+              </h3>
+            </a>
+          </div>
+<% } %>
+</div>
+
+<div class="doc_comments">
+<% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+          <% if (commentSetting.commentPlatform === 'gitalk') { %>
+			<div id="gitalk-container"></div>
+            <%- include('./_blocks/gitalk') %>
+          <% } %>
+			  
+          <% if (commentSetting.commentPlatform === 'disqus') { %>
+            <%- include('./_blocks/disqus') %>
+          <% } %>
+        <% } %>
+</div>
+
+  </div>
+</div>
+
+
+      </div>
+<div class="toc-container">
+<%- post.toc %>
+</div>
+    </div>
+	
+<%- include('./_blocks/footer') %>
+</body>
+
+</html>

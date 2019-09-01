@@ -1,0 +1,39 @@
+
+<html>
+  <head lang="zh">
+ <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
+
+  </head>
+
+  <body>
+<%- include('./_blocks/header') %>
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+
+
+<div class="content">
+  <div class="list_with_title">
+
+ <div class="tags-container"><% tags.forEach((tag) => { %>
+            <a class="tag" href="<%= tag.link %>"><%= tag.name %></a>
+          <% }); %>
+ </div>
+ 
+
+
+
+
+  </div>
+
+</div>
+
+
+
+      </div>
+
+    </div>
+
+<%- include('./_blocks/footer') %>
+</body>
+
+</html>

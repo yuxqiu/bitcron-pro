@@ -1,0 +1,57 @@
+
+<html>
+  <head lang="zh">
+   <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
+  </head>
+
+  <body>
+<%- include('./_blocks/header') %>
+
+
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+
+
+<div class="content">
+	<% let years = []; posts.forEach((item) => { const year = item.date.substring(0, 4); if (!years.includes(year)) { years.push(year); } }); %>
+	<% years.forEach(function(year) { %>
+  <div class="list_with_title">
+
+    <div class="listing_title"><%- year %></div>
+
+	  
+    <div class="listing">
+      <div class="listing-item">
+		  <% posts.forEach(function(post) { %>
+                                <%if (post.date.indexOf(year) !== -1) { %>
+        <div class="listing_post"><a href="<%= post.link %>/" title="<%= post.title %>" ><%= post.title %></a>
+
+          <div class="post_date"><span class="date"><%= post.dateFormat %></span>
+
+          </div>
+
+        </div>
+ <% } %>
+                            <% }); %>
+      </div>
+
+
+		
+		
+		
+    </div>
+
+
+  </div>
+<% }); %>
+</div>
+
+
+
+      </div>
+
+    </div>
+ <%- include('./_blocks/footer') %>
+</body>
+
+</html>

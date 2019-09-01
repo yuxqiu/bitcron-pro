@@ -1,0 +1,38 @@
+   <div class="footer">
+<div class="site_footer_wrap"><div class="site_footer">
+
+      <div class="mysocials"><div class="my_socials">
+		   <% ['telegram', 'twitter', 'weibo', 'github', 'envelope', 'rss'].forEach((item) => { %>
+			   <% if (site.customConfig[item]) { %>
+<a href="<%= site.customConfig[item] %>" title="<%= item %>"><i class="fa fa-<%= item %>"></i></a>
+<% } %>
+    <% }) %>
+</div>
+      </div>
+
+      <div class="copyright" id="copyright"><%- themeConfig.footerInfo %>
+      </div>
+	  <img src="<%= themeConfig.domain %>/images/bottom.svg">
+
+    </div>
+
+<script type="text/javascript" src="<%= themeConfig.domain %>/media/scripts/love.js"></script>
+<script type="text/javascript" src="<%= themeConfig.domain %>/media/scripts/darkmode.js"></script>
+<script>
+var options = {
+  bottom: '64px', // default: '32px'
+  right: '32px', // default: '32px'
+  left: 'unset', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: false, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+}
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+</script>

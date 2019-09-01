@@ -1,0 +1,158 @@
+    <div class="header">
+      <div class="logo_title">
+		  
+        <div class="title animated fadeInDown"><img id="img1" style="display:inline-block;" src="<%= themeConfig.domain %>/images/avatar.png"/>
+<script>
+var r = 0;
+    window.onload = function(){
+        var current = 0;
+        document.getElementById('img1').onclick = function(){
+            current = (current+90)%360;
+            this.style.transform = 'rotate('+current+'deg)';
+        }
+    };
+</script>
+          <h1 title="<%= themeConfig.siteName %>" class="weaklink"><a  href="/"><%= themeConfig.siteName %></a>
+
+          </h1>
+
+          <div class="navbar weaklink">
+            <div class="normal_nav">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+		
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	  
+ <% menus.forEach(function (menu) { %>
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="<%= menu.link %>" class="selected active current nav__item" ><%= menu.name %></a>
+  </li>
+  
+ <% }); %>
+ <li>
+
+      </ul>
+	  
+
+      <div class="clear clear_nav_inline_end"></div>
+<div class="search">
+    <i class="search-icon fa fa-search search-start"></i>
+    <input type="text" class="search-input" placeholder="Searching..." />
+    <i class="search-icon fa fa-refresh search-clear"></i>
+	<div class="search-results"></div>
+</div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+            </div>
+			
+			<div class="hamberger"><i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>
+
+			</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidden_nav animated fadeInDown">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	<% menus.forEach(function (menu) { %>
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="<%= menu.link %>" class="selected active current nav__item" ><%= menu.name %></a>
+
+  </li>
+
+<% }); %>
+
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+      </div>
+
+    </div>
+
+<style type="text/css">
+.search {
+    position: relative;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+    padding-right: 10px;
+}
+
+.search .search-icon {
+    float: right;
+    height: 100%;
+    margin: 0 10px;
+    line-height: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.search .search-input {
+    float: right;
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.search .search-clear {
+    display: none;
+}
+
+.search .search-results {
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    width: 50%;
+    max-height: 400px;
+    overflow: auto;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 .3rem .5rem #333;
+}
+
+.search .search-results .result-item {
+    color: #000;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+</style>

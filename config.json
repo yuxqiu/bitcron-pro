@@ -1,0 +1,63 @@
+{
+  "name": "bitcron",
+  "version": "1.0.0",
+  "author": "文中君",
+  "customConfig": [
+	  {
+      "name": "github",
+      "label": "Github",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "twitter",
+      "label": "Twitter",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "weibo",
+      "label": "微博",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "send-o",
+      "label": "Telegram",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+	{
+      "name": "rss",
+      "label": "Rss",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+	{
+      "name": "envelope",
+      "label": "Mail",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "ga",
+      "label": "跟踪 ID",
+      "group": "谷歌统计",
+      "value": "",
+      "type": "input",
+      "note": "UA-xxxxxxxxx-x"
+    }
+  ]
+}

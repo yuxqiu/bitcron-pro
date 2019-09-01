@@ -1,0 +1,50 @@
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta name="renderer" content="webkit">
+<meta name="description" content="<%= themeConfig.siteDescription %>">
+<meta name="keywords" content="Serence, 机器学习, 编程, 文艺青年, 程序员, 诗, 湫, 信息论, 概率论"/>
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+<title><%= siteTitle %></title>
+<link href="<%= themeConfig.domain %>/styles/main.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="<%= themeConfig.domain %>/media/scripts/jquery.js"></script>
+<script type="text/javascript" src="<%= themeConfig.domain %>/media/scripts/jquery.pjax.min.js"></script>
+<script type="text/javascript" src="<%= themeConfig.domain %>/media/scripts/basic.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+<script async type="text/javascript" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async type="text/javascript" src="<%= themeConfig.domain %>/media/scripts/search.js"></script>
+<script type="text/javascript">
+$(document).pjax('a[target!=_blank]', '#pjax-container', {
+	fragment: '#pjax-container',
+	timeout: 5000,
+	cache: false
+});
+$(document).on('pjax:complete', function(){  	
+	pjax();
+});
+
+$(window).on('popstate.pjax', function () {
+	pjax();
+})
+
+function pjax() {
+	$.getScript("https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+
+	if (("#gitalk-container").length > 0 ) {
+	$('#mememe').attr('src','https://source.unsplash.com/800x400/?arts,weather?'+Math.random());
+	}
+	
+	var bp = document.createElement('script');
+	var curProtocol = window.location.protocol.split(':')[0];
+	if (curProtocol === 'https') {
+		bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+	}
+	else {
+		bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	}
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(bp, s);
+}
+</script>

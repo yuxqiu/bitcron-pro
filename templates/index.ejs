@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+  <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
+  </head>
+
+  <body>
+<%- include('./_blocks/header') %>
+
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+
+<div class="content">
+
+
+
+
+
+
+  <div class="post_list" >
+<% posts.forEach(function(post) { %>
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="<%= post.link %>/" ><%= post.title %></a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p><%- post.abstract %></p></div></div>
+  <a class="pure-button" href="<%= post.link %>/">Read More >>> </a>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info"><%= post.dateFormat %></span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	<% post.tags.forEach(function(tag) { %>
+	<a href="<%= tag.link %>" class="tag"><%= tag.name %></a>
+
+<% }); %>
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+<% }); %>	
+
+<div class="paginator pager pagination" >
+	
+  <div class="paginator_container pagination_container">
+	  
+	    <% if (pagination.prev) { %>
+	  <a href="<%= pagination.prev %>"  class="btn pre newer-posts newer_posts"> Newer Posts </a>
+		<% } %>								
+										
+	  <% if (pagination.next) { %>
+	  <a href="<%= pagination.next %>"  class="btn next older-posts older_posts"> Older Posts </a>
+<% } %>
+
+
+    <div style="clear:both;height:0;"></div>
+
+
+  </div>
+
+</div>
+</div>
+  </div>
+</div>
+
+    </div>
+<%- include('./_blocks/footer') %>
+</body>
+
+</html>
