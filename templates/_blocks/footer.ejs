@@ -10,7 +10,26 @@
 </div>
       </div>
 
-      <div class="copyright" id="copyright"><%- themeConfig.footerInfo %>
+      <div class="copyright" id="copyright">
+	  <script>
+		var date=new Date;
+		var year=date.getFullYear(); 
+		document.getElementById("copyright").innerHTML = "Copyright © "+year+“ ” + <%= siteTitle %>;
+		</script>
+		Powered by Gridea.
+		<br>
+		本站已稳定运行了
+		<strong><script type="text/javascript">
+		var urodz= new Date("10/28/2018");
+		var now = new Date();
+		var ile = now.getTime() - urodz.getTime();
+		var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
+		document.write(+dni)
+		</script>
+		</strong>天
+		<br>
+		本站总访问量为 <strong><span id="busuanzi_value_site_uv"></span></strong> 次
+	  <%- themeConfig.footerInfo %>
       </div>
 	  <img src="<%= themeConfig.domain %>/images/bottom.svg">
 
