@@ -1,7 +1,7 @@
 {
-  "name": "bitcron",
-  "version": "1.0.0",
-  "author": "文中君",
+  "name": "bitcron-pro",
+  "version": "1.0.1",
+  "author": "Serence",
   "customConfig": [
 	  {
       "name": "github",
