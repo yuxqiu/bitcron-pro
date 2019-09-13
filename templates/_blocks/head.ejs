@@ -4,7 +4,6 @@
 <meta content="telephone=no" name="format-detection"/>
 <meta name="renderer" content="webkit">
 <meta name="description" content="<%= themeConfig.siteDescription %>">
-<meta name="keywords" content="Serence, 机器学习, 编程, 文艺青年, 程序员, 诗, 湫, 信息论, 概率论"/>
 <meta http-equiv="Access-Control-Allow-Origin" content="*">
 
 <title><%= siteTitle %></title>
@@ -40,16 +39,5 @@ function pjax() {
 	$.getScript("//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js");
 	$.getScript("//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js");
 	}
-	
-	var bp = document.createElement('script');
-	var curProtocol = window.location.protocol.split(':')[0];
-	if (curProtocol === 'https') {
-		bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-	}
-	else {
-		bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-	}
-	var s = document.getElementsByTagName("script")[0];
-	s.parentNode.insertBefore(bp, s);
 }
 </script>
