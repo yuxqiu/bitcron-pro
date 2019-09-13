@@ -178,7 +178,7 @@ $("img").each( (i,o) => {
 <% if (post.nextPost && !post.hideInList) { %>
           <div style="float:right;text-align:right;color:#ccc;font-size:18px;width:50%;">
             下一篇
-            <a href="<%= post.nextPost.link %>/">
+            <a href="<%= post.nextPost.link %>">
               <h3 class="post-title">
                 <%= post.nextPost.title %>
               </h3>
@@ -189,7 +189,7 @@ $("img").each( (i,o) => {
 <% if (post.prevPost && !post.hideInList) { %>
           <div style="float:left;text-align:left;color:#ccc;font-size:18px;width:50%;">
             上一篇
-            <a href="<%= post.prevPost.link %>/">
+            <a href="<%= post.prevPost.link %>">
               <h3 class="post-title">
                 <%= post.prevPost.title %>
               </h3>
