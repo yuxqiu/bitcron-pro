@@ -24,7 +24,7 @@
       <div class="listing-item">
 		  <% posts.forEach(function(post) { %>
                                 <%if (post.date.indexOf(year) !== -1) { %>
-        <div class="listing_post"><a href="<%= post.link %>/" title="<%= post.title %>" ><%= post.title %></a>
+        <div class="listing_post"><a href="<%= post.link %>" title="<%= post.title %>" ><%= post.title %></a>
 
           <div class="post_date"><span class="date"><%= post.dateFormat %></span>
 
