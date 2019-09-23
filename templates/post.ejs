@@ -81,13 +81,7 @@ function change(){
 <% }); %>
 
 </span>
-<i class="fa fa-pencil"></i>
-<span id="fn">
-</span>
-&nbsp
-&nbsp
-<i class="fa fa-clock-o"></i>
-<span id="read_time"></span>
+<span><%= post.stats.text %></span>
 &nbsp
 &nbsp
 <i class="fa fa-share"></i>
@@ -119,36 +113,6 @@ function change(){
 </p> 
 </div>
 </div>
-
-
-<script>
-var data=document.getElementById("show").innerText
-var pattern = /[a-zA-Z0-9_\u0392-\u03c9]+|[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af]+/g;
-var m =data.match(pattern);
-var count = 0;
-if(m==null){
-document.getElementById("fn").innerHTML = count + "字"
-document.getElementById("read_time").innerHTML = '0 min read'
-}
-else{
-for(var i=0;i<m.length;i++){
-	if(m[i].charCodeAt(0)>=0x4E00){
-		count +=m[i].length;
-	}else{
-		count += 1;
-	}
-}
-
-var readTime = count / 250;
-var readTime = Math.round(readTime);
-if(readTime > 1){
-    document.getElementById("read_time").innerHTML = readTime + " min read"
-}else{
-    document.getElementById("read_time").innerHTML = '1 min read'
-}
-document.getElementById("fn").innerHTML = count + "字"
-}
-</script>
 
 <style type="text/css">
 #mememe {
