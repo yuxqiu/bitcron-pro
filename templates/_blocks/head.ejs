@@ -39,6 +39,9 @@ function pjax() {
 	$('#mememe').attr('src','//source.unsplash.com/800x400/?arts,weather?'+Math.random());
 	$.getScript("//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js");
 	$.getScript("//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js");
+	$('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    	});
 	}
 }
 </script>
