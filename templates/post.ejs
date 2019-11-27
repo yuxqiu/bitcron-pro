@@ -126,18 +126,6 @@ function change(){
 }
 </style>
 
-<script>
-var link = "" ;
-$("img").each( (i,o) => {
-	var o = $(o);
-	if( o.attr("src").indexOf("sinaimg") > 0 || o.attr("src").indexOf("qpic") > 0 || o.attr("src").indexOf("baidu") > 0 || o.attr("src").indexOf("sinaimg") > 0){
-		o.attr("referrerpolicy","no-referrer");
-		link = o.attr("src");
-		o.attr("src",link);
-	}
-});
-</script>
-
 <div style="width:100%;overflow:hidden">
 <% if (post.nextPost && !post.hideInList) { %>
           <div style="float:right;text-align:right;color:#ccc;font-size:18px;width:50%;">
@@ -174,7 +162,22 @@ $("img").each( (i,o) => {
           <% } %>
         <% } %>
 </div>
-
+<script>
+var link="";$("img").each((i,o)=>{var o=$(o);if(o.attr("src").indexOf("sinaimg")>0||o.attr("src").indexOf("qpic")>0||o.attr("src").indexOf("baidu")>0||o.attr("src").indexOf("sinaimg")>0){o.attr("referrerpolicy","no-referrer");link=o.attr("src");o.attr("src",link);}});
+imgList = document.querySelectorAll('img')
+imgList.forEach(img => {
+  if (img.alt !== "logo"){
+  let div1 = document.createElement('div')
+  let div = document.createElement('div')
+  div.className='back';
+  var figuration = document.createElement("figcaption")
+  figuration.innerHTML = '<a href="' + img.src + '">' + img.alt + '</a>'
+  img.replaceWith(div1)
+  div1.appendChild(div)
+  div.appendChild(img)
+  div1.appendChild(figuration)}
+})
+</script>
   </div>
 </div>
 
