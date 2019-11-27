@@ -21,7 +21,7 @@ Gridea-theme bitcron-pro
 13、字体缩小  
 14、Katex支持（详情可以查看[这篇文章](https://blog.blinkstar.cn/post/katex/)）  
 15、增加显示封面的功能[注：如果没有设置封面图默认会使用unsplash图片]  
-16、搜索功能（感谢[云中君](https://shanbu.fun)；详情可参考[这篇文章](https://github.com/alterfang/bolg/issues/5))  
+16、搜索功能（感谢[云中君](https://shanbu.fun)；详情可参考[这篇文章](https://github.com/alterfang/bolg/issues/5);可在设置里选择关闭)  
 17、文章内上下篇显示  
 18、微信、百度等防盗链解除（注：在微信X5内核浏览器等一些浏览器无效；实测Chrome下正常）  
 19、代码高亮  
