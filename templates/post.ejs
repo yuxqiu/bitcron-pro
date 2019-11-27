@@ -169,7 +169,7 @@ function change(){
 var link="";$("img").each((i,o)=>{var o=$(o);if(o.attr("src").indexOf("sinaimg")>0||o.attr("src").indexOf("qpic")>0||o.attr("src").indexOf("baidu")>0||o.attr("src").indexOf("sinaimg")>0){o.attr("referrerpolicy","no-referrer");link=o.attr("src");o.attr("src",link);}});
 imgList = document.querySelectorAll('img')
 imgList.forEach(img => {
-  if (img.alt !== "logo" or img.alt !== "featureimg"){
+  if (img.alt !== "logo" && img.alt !== "featureimg"){
   let div1 = document.createElement('div')
   let div = document.createElement('div')
   div.className='back';
