@@ -1,6 +1,6 @@
 {
   "name": "bitcron-pro",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Serence",
   "customConfig": [
 	  {
@@ -58,6 +58,15 @@
       "value": "",
       "type": "input",
       "note": "UA-xxxxxxxxx-x"
+    },
+	{
+      "name": "search",
+      "label": "是否需要搜索功能",
+      "group": "搜索",
+      "value": true,
+      "type": "switch",
+      "note": ""
     }
+
   ]
 }
