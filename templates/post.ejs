@@ -97,11 +97,14 @@ function change(){
 </div>
   </div>
 
-  <div class="post_content markdown">
-  &nbsp
-  <img id="mememe" src="//source.unsplash.com/800x400/?arts,weather">
+    <div class="post_content markdown">
+	<% if (themeConfig.showFeatureImage && post.feature) { %>
+	<div style="background-image: url('<%= post.feature %>');background-repeat: no-repeat;background-size:100% auto;margin-top:32px;padding-bottom: 50%;"></div>
+	<% } else { %>
+	<img id="mememe" alt="featureimg" src="//source.unsplash.com/800x400/?arts,weather">
+	<% } %>
     <div name="show" id="show">
-	<p class="md_block"><span class="md_line md_line_start md_line_end"><%- post.content %></span></p></div>
+	<p class="md_block"><span class="md_line md_line_start md_line_end"><%- post.content %></span></p></div><div id = "warn"></div>
 	<br>
 	<hr>
 <div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/"><%= themeConfig.siteName %></a>创作</div>	
@@ -166,7 +169,7 @@ function change(){
 var link="";$("img").each((i,o)=>{var o=$(o);if(o.attr("src").indexOf("sinaimg")>0||o.attr("src").indexOf("qpic")>0||o.attr("src").indexOf("baidu")>0||o.attr("src").indexOf("sinaimg")>0){o.attr("referrerpolicy","no-referrer");link=o.attr("src");o.attr("src",link);}});
 imgList = document.querySelectorAll('img')
 imgList.forEach(img => {
-  if (img.alt !== "logo"){
+  if (img.alt !== "logo" or img.alt !== "featureimg"){
   let div1 = document.createElement('div')
   let div = document.createElement('div')
   div.className='back';
@@ -177,6 +180,14 @@ imgList.forEach(img => {
   div.appendChild(img)
   div1.appendChild(figuration)}
 })
+$('img').on('error',function(){$(this).prop('src','<%= themeConfig.domain %>/media/images/broken.jpg')});$("a").attr("rel","external nofollow");$("a[rel='external nofollow']").attr("target","_blank");$("a[href^='#']").removeAttr("target");$("a.ex").removeAttr("rel");$("a.ex").removeAttr("target");
+content="<div class='warn'>本文最后更新于<%= post.dateFormat %>，已超过 1 年没有更新，涉及的内容可能已经失效！</div>";
+var date1="<%= post.date %>";
+date1=date1.replace("-","/");
+var date2=new Date();
+var date3=date2.getTime()-new Date(date1).getTime();
+var days=Math.floor(date3/(24*3600*1000));
+if(days>=365){document.getElementById("warn").innerHTML=content};
 </script>
   </div>
 </div>
