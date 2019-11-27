@@ -8,7 +8,7 @@ Gridea-theme bitcron-pro
 基于原版添加了以下内容：  
 1、Pjax支持（详情可以查看[这篇文章](https://blog.blinkstar.cn/post/pjax/)）  
 2、底部添加“重拾写作的乐趣”  
-3、点击爱心特效
+3、点击爱心特效  
 4、网站运行时间计算（如果要看怎么改运行时间可以参考[这篇文章](https://blog.blinkstar.cn/post/beautifyblog/) ）  
 5、阅读时间以及文章字数计算  
 6、toc目录支持——在Gridea内@[toc]即可  
@@ -20,9 +20,12 @@ Gridea-theme bitcron-pro
 12、繁简体转换  
 13、字体缩小  
 14、Katex支持（详情可以查看[这篇文章](https://blog.blinkstar.cn/post/katex/)）  
-15、文章随机图片（感谢unsplash）  
+15、增加显示封面的功能[注：如果没有设置封面图默认会使用unsplash图片]  
 16、搜索功能（感谢[云中君](https://shanbu.fun)；详情可参考[这篇文章](https://github.com/alterfang/bolg/issues/5))  
 17、文章内上下篇显示  
 18、微信、百度等防盗链解除（注：在微信X5内核浏览器等一些浏览器无效；实测Chrome下正常）  
 19、代码高亮  
 20、添加图片简介  
+21、无法加载的图片自动替换成404  
+22、发布时间过长的文章增加提示  
+23、更改字体  
