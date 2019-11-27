@@ -32,4 +32,4 @@ Gridea-theme bitcron-pro
   
 # 效果图
 ![首页](https://github.com/qyxtim/bitcron-pro/blob/master/index.png?raw=true)
-![内容页](https://github.com/qyxtim/bitcron-pro/blob/master/passage.png?raw=true)
+![内容页](https://github.com/qyxtim/bitcron-pro/blob/master/article.png?raw=true)
