@@ -29,3 +29,7 @@ Gridea-theme bitcron-pro
 21、无法加载的图片自动替换成404  
 22、发布时间过长的文章增加提示  
 23、更改字体  
+  
+# 效果图
+![首页](https://github.com/alterfang/gridea-theme-bitcron/blob/master/209ce08248bd871727a9791a796ea206.md.png?raw=true)
+![内容页](https://github.com/alterfang/gridea-theme-bitcron/blob/master/617ef719bbb2606a21bb9b04fd3a23c8.md.png?raw=true)
