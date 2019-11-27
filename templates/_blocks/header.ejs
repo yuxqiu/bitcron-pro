@@ -38,12 +38,14 @@ var r = 0;
 	  
 
       <div class="clear clear_nav_inline_end"></div>
+<% if (site.customConfig.search) { %>
 <div class="search">
-    <i class="search-icon fa fa-search search-start"></i>
-    <input type="text" class="search-input" placeholder="Searching..." />
-    <i class="search-icon fa fa-refresh search-clear"></i>
-	<div class="search-results"></div>
+<i class="search-icon fa fa-search search-start"></i>
+<input type="text" class="search-input" placeholder="Searching..." />
+<i class="search-icon fa fa-refresh search-clear"></i>
+<div class="search-results"></div>
 </div>
+<% } %>
     </div>
 
   </div>
