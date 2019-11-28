@@ -30,6 +30,13 @@ Gridea-theme bitcron-pro
 22、发布时间过长的文章增加提示  
 23、更改字体  
   
+# 2019.11.28 更新
+1、修复 pjax bug  
+2、在主页文章添加文章字数显示  
+3、更换文章页面字数显示的小图标  
+4、修复赞赏码显示问题  
+
+
 # 效果图
 ![首页](https://github.com/qyxtim/bitcron-pro/blob/master/index.png?raw=true)
 ![内容页](https://github.com/qyxtim/bitcron-pro/blob/master/article.png?raw=true)
