@@ -28,23 +28,33 @@
   <div class="post_content markdown"><div class="p_part"><p><%- post.abstract %></p></div></div>
   <a class="pure-button" href="<%= post.link %>">Read More >>> </a>
   <div class="post_footer">
-    <div class="info weaklink"><i class="fa fa-clock-o"></i>
-<span class="date_info"><%= post.dateFormat %></span>
-
-<i class="fa fa-bookmark-o"></i>
-	
-<span class="tags_info weaklink">
-	<% post.tags.forEach(function(tag) { %>
-	<a href="<%= tag.link %>" class="tag"><%= tag.name %></a>
-
-<% }); %>
-
-</span>
-
-<span><%= post.stats.text %></span>
-
-
-    </div>
+<div class="info weaklink">
+	<i class="fa fa-calendar">
+	</i>
+	<span class="date_info">
+		<%=post.dateFormat%>
+	</span>
+	<i class="fa fa-bookmark-o">
+	</i>
+	<span class="tags_info weaklink">
+		<%post.tags.forEach(function(tag){%>
+			<a href="<%= tag.link %>" class="tag">
+				<%=tag.name%>
+			</a>
+			<%});%>
+	</span>
+	<i class="fa fa-anchor">
+	</i>
+	<span class="weaklink" style="margin-right:15px;">
+		<%=post.stats.words%>
+			字
+	</span>
+	<i class="fa fa-clock-o">
+	</i>
+	<span class="weaklink" style="margin-right:15px;">
+		<%=post.stats.text%>
+	</span>
+</div>
 
   </div>
 
