@@ -66,34 +66,37 @@ function change(){
     document.getElementById("show").style.fontSize = num - rand +'px';
 }
 </script>
-
   <div class="post_details">
-    <div class="info"><i class="fa fa-clock-o"></i>
+    <div class="info"><i class="fa fa-calendar"></i>
 <span class="date_info"><%= post.dateFormat %></span>
 <i class="fa fa-eye"></i>
-
 <span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
-
 <i class="fa fa-bookmark-o"></i>
 <span class="tags_info weaklink">
 	<% post.tags.forEach(function(tag) { %>
 	<a href="<%= tag.link %>" class="tag"><%= tag.name %></a>
 <% }); %>
-
 </span>
-<span><%= post.stats.text %></span>
-&nbsp
-&nbsp
+<i class="fa fa-anchor"></i>
+<span style="margin-right:15px">
+<%=post.stats.words %>字
+</span>
+<i class="fa fa-clock-o"></i>
+<span style="margin-right:15px">
+<%=post.stats.text %>
+</span>
+<span style="margin-right:15px">
 <i class="fa fa-share"></i>
 <a title="QR code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<%= post.link %>"><i class="fa fa-qrcode"></i></a>
 <a title="qq share" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<%= post.link %>&sharesource=qzone&title=<%= post.title %>&pics=https://blog.blinkstar.cn/images/avatar.png&summary=<%= post.abstract %>"><i class="fa fa-qq"></i></a>
 <a title="weibo share" target="_blank" href="https://service.weibo.com/share/share.php?url=<%= post.link %>&sharesource=weibo&title=<%= post.title%> + " - " + <%= post.abstract %>&pic="https://blog.blinkstar.cn/images/avatar.png"><i class="fa fa-weibo"></i></a>
-&nbsp
-&nbsp
+</span>
+<span style="margin-right:15px">
 <a id="daxiao" href="javascript:void(0);" onclick="change();" title="调整字体大小"><i class="fa fa-font"></i></a>
-&nbsp
-&nbsp
+</span>
+<span style="margin-right:15px">
 <a id="lan" href="javascript:void(0);" onclick="lan();" title="调整简繁体">繁</a>
+</span>
 </div>
   </div>
 
@@ -110,8 +113,8 @@ function change(){
 <div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/"><%= themeConfig.siteName %></a>创作</div>	
 <div style="color: #ccc;font-size:14px;"><i class="fa fa-cc"></i>该文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处！</div>
 <div style="color: #ccc;font-size:14px;"><i class="fa fa-clock-o"></i>发布时间为：<%= post.dateFormat %></div>    
-	 <p class="md_block">
-    <div class="reward"><div class="reward-button">赏 <span class="reward-code"> <span class="alipay-code"> <img class="alipay-img" src="<%= themeConfig.domain %>/media/images/alipay.png"><b>支付宝扫码打赏</b> </span> <span class="wechat-code"> <img class="wechat-img" src="<%= themeConfig.domain %>/media/images/wechat.png"><b>微信打赏</b> </span> </span></div></div>
+<p class="md_block">
+<div class="reward"><div class="reward-button">赏 <span class="reward-code"> <span class="alipay-code"> <img class="alipay-img" alt = "support" src="<%= themeConfig.domain %>/media/images/alipay.png"><b>支付宝扫码打赏</b> </span> <span class="wechat-code"> <img alt ="support" class="wechat-img" src="<%= themeConfig.domain %>/media/images/wechat.png"><b>微信打赏</b> </span> </span></div></div>
 <div style="text-align:center;color: #ccc;font-size:14px;">如果觉得这篇文章对您有帮助，可以请作者喝一杯饮料哦🥤</div>    
 </p> 
 </div>
@@ -169,7 +172,7 @@ function change(){
 var link="";$("img").each((i,o)=>{var o=$(o);if(o.attr("src").indexOf("sinaimg")>0||o.attr("src").indexOf("qpic")>0||o.attr("src").indexOf("baidu")>0||o.attr("src").indexOf("sinaimg")>0){o.attr("referrerpolicy","no-referrer");link=o.attr("src");o.attr("src",link);}});
 imgList = document.querySelectorAll('img')
 imgList.forEach(img => {
-  if (img.alt !== "logo" && img.alt !== "featureimg"){
+  if (img.alt !== "logo" && img.alt !== "featureimg" && img.alt !== "support"){
   let div1 = document.createElement('div')
   let div = document.createElement('div')
   div.className='back';
@@ -180,7 +183,7 @@ imgList.forEach(img => {
   div.appendChild(img)
   div1.appendChild(figuration)}
 })
-$('img').on('error',function(){$(this).prop('src','<%= themeConfig.domain %>/media/images/broken.jpg')});$("a").attr("rel","external nofollow");$("a[rel='external nofollow']").attr("target","_blank");$("a[href^='#']").removeAttr("target");$("a.ex").removeAttr("rel");$("a.ex").removeAttr("target");
+$('img').on('error',function(){$(this).prop('src','<%= themeConfig.domain %>/media/images/broken.jpg')});
 content="<div class='warn'>本文最后更新于<%= post.dateFormat %>，已超过 1 年没有更新，涉及的内容可能已经失效！</div>";
 var date1="<%= post.date %>";
 date1=date1.replace("-","/");
