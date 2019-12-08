@@ -34,7 +34,11 @@ $(window).on('popstate.pjax', function () {
 
 function pjax() {
 	$.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
-
+	$.getScript("<%= themeConfig.domain %>/media/js/lightgallery.min.js");	
+	$('#pjax-container').lightGallery({
+    		selector: '.back'
+	});
+	
 	if (("#gitalk-container").length > 0 ) {
 	$('#mememe').attr('src','//source.unsplash.com/800x400/?arts,weather?'+Math.random());
 	$.getScript("//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js");
