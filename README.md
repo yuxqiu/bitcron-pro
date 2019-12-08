@@ -47,7 +47,7 @@ Gridea-theme bitcron-pro
   
 ## English_version
   
-Based on original version add these changes：
+Based on original version add these changes:  
 1、Add picture light box effect  
 2、Add “重拾写作的乐趣” at the footer  
 3、Add mouse click special effects  
