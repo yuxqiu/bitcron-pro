@@ -8,7 +8,7 @@ Gridea-theme bitcron-pro
 [English version](#English_version)
   
 基于原版添加了以下内容：  
-1、Pjax支持（详情可以查看[这篇文章](https://blog.blinkstar.cn/post/pjax/)）  
+1、图片灯箱  
 2、底部添加“重拾写作的乐趣”  
 3、点击爱心特效  
 4、网站运行时间计算（如果要看怎么改运行时间可以参考[这篇文章](https://blog.blinkstar.cn/post/beautifyblog/) ）  
@@ -30,12 +30,12 @@ Gridea-theme bitcron-pro
 20、添加图片简介  
 21、无法加载的图片自动替换成404  
 22、发布时间过长的文章增加提示   
-23、图片灯箱  
   
 ### 更新
   
 **2019.12.8**  
-1、增加图片灯箱效果
+1、增加图片灯箱效果  
+2、删除Pjax效果，因为对一些js不兼容
   
 **2019.11.28**  
 1、修复 pjax bug  
@@ -47,8 +47,8 @@ Gridea-theme bitcron-pro
   
 ## English_version
   
-Based on original version add these changes：  
-1、Add pjax  
+Based on original version add these changes：
+1、Add picture light box effect  
 2、Add “重拾写作的乐趣” at the footer  
 3、Add mouse click special effects  
 4、Count website run time  
@@ -70,12 +70,12 @@ Based on original version add these changes：
 20、Add alt below the picture  
 21、Replace broken picture with 404 picture  
 22、Add prompt for article released for a long time  
-23、Add picture light box effect  
 
 ### Update
   
 **2019.12.8**  
-1、Add support for picture light box
+1、Add support for picture light box  
+2、Cancel Pjax function because it doesn't support some js
   
 **2019.11.28**  
 1、Fix pjax bug  
