@@ -19,34 +19,3 @@
 <script async type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script async type="text/javascript" src="<%= themeConfig.domain %>/media/scripts/search.js"></script>
 <script type="text/javascript" src="<%= themeConfig.domain %>/media/js/lightgallery.min.js"></script>
-<script type="text/javascript">
-$(document).pjax('a[target!=_blank]', '#pjax-container', {
-	fragment: '#pjax-container',
-	timeout: 5000,
-	cache: false
-});
-$(document).on('pjax:complete', function(){  	
-	pjax();
-});
-
-$(window).on('popstate.pjax', function () {
-	pjax();
-})
-
-function pjax() {
-	$.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
-	$.getScript("<%= themeConfig.domain %>/media/js/lightgallery.min.js");	
-	$('#pjax-container').lightGallery({
-    		selector: '.back'
-	});
-	
-	if (("#gitalk-container").length > 0 ) {
-	$('#mememe').attr('src','//source.unsplash.com/800x400/?arts,weather?'+Math.random());
-	$.getScript("//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js");
-	$.getScript("//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js");
-	$('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
-    	});
-	}
-}
-</script>
