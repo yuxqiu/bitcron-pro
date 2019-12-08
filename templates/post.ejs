@@ -172,10 +172,11 @@ function change(){
 var link="";$("img").each((i,o)=>{var o=$(o);if(o.attr("src").indexOf("sinaimg")>0||o.attr("src").indexOf("qpic")>0||o.attr("src").indexOf("baidu")>0||o.attr("src").indexOf("sinaimg")>0){o.attr("referrerpolicy","no-referrer");link=o.attr("src");o.attr("src",link);}});
 imgList = document.querySelectorAll('img')
 imgList.forEach(img => {
-  if (img.alt !== "logo" && img.alt !== "featureimg" && img.alt !== "support"){
+  if (img.alt !== "logo" && img.alt !== "featureimg"){
   let div1 = document.createElement('div')
   let div = document.createElement('div')
   div.className='back';
+  div.setAttribute("data-src",img.src)
   var figuration = document.createElement("figcaption")
   figuration.innerHTML = '<a href="' + img.src + '">' + img.alt + '</a>'
   img.replaceWith(div1)
@@ -183,14 +184,11 @@ imgList.forEach(img => {
   div.appendChild(img)
   div1.appendChild(figuration)}
 })
-$('img').on('error',function(){$(this).prop('src','<%= themeConfig.domain %>/media/images/broken.jpg')});
-content="<div class='warn'>本文最后更新于<%= post.dateFormat %>，已超过 1 年没有更新，涉及的内容可能已经失效！</div>";
-var date1="<%= post.date %>";
-date1=date1.replace("-","/");
-var date2=new Date();
-var date3=date2.getTime()-new Date(date1).getTime();
-var days=Math.floor(date3/(24*3600*1000));
-if(days>=365){document.getElementById("warn").innerHTML=content};
+$('img').on('error',function(){$(this).prop('src','<%= themeConfig.domain %>/media/images/broken.jpg')});$("a").attr("rel","external nofollow");$("a[rel='external nofollow']").attr("target","_blank");$("a[href^='#']").removeAttr("target");$("a.ex").removeAttr("rel");$("a.ex").removeAttr("target");
+content="<div class='warn'>本文最后更新于<%= post.dateFormat %>，已超过 1 年没有更新，涉及的内容可能已经失效！</div>";var date1="<%= post.date %>";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+$('#pjax-container').lightGallery({
+    selector: '.back'
+});
 </script>
   </div>
 </div>
