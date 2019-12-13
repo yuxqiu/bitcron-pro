@@ -189,6 +189,16 @@ content="<div class='warn'>本文最后更新于<%= post.dateFormat %>，已超�
 $('#pjax-container').lightGallery({
     selector: '.back'
 });
+tocbot.init({
+	tocSelector: '.toc',
+	contentSelector: '.main-inner',
+	headingSelector: 'h1, h2, h3, h4, h5',
+	positionFixedSelector: ".toc",
+	scrollSmooth: true,
+	fixedSidebarOffset: 'auto',
+    scrollSmoothOffset: -80,
+    headingsOffset: -500
+});
 </script>
   </div>
 </div>
