@@ -124,9 +124,9 @@ function change(){
           <div style="float:right;text-align:right;color:#ccc;font-size:18px;width:50%;">
             下一篇
             <a href="<%= post.nextPost.link %>">
-              <h3 class="post-title">
-                <%= post.nextPost.title %>
-              </h3>
+              <p class="post-title">
+                <b><%= post.nextPost.title %></b>
+              </p>
             </a>
           </div>
 <% } %>
@@ -135,9 +135,9 @@ function change(){
           <div style="float:left;text-align:left;color:#ccc;font-size:18px;width:50%;">
             上一篇
             <a href="<%= post.prevPost.link %>">
-              <h3 class="post-title">
-                <%= post.prevPost.title %>
-              </h3>
+              <p class="post-title">
+                <b><%= post.prevPost.title %></b>
+              </p>
             </a>
           </div>
 <% } %>
