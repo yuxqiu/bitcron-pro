@@ -30,8 +30,12 @@ Gridea-theme bitcron-pro
 20、添加图片简介  
 21、无法加载的图片自动替换成404  
 22、发布时间过长的文章增加提示   
+23、文章目录贴边显示  
   
 ### 更新
+  
+**2019.12.13**  
+1、文章右侧添加文章目录  
   
 **2019.12.8**  
 1、增加图片灯箱效果  
@@ -70,8 +74,12 @@ Based on original version add these changes:
 20、Add alt below the picture  
 21、Replace broken picture with 404 picture  
 22、Add prompt for article released for a long time  
+23、Add toc  
 
 ### Update
+  
+**2019.12.13**  
+1、Add toc
   
 **2019.12.8**  
 1、Add support for picture light box  
