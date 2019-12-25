@@ -60,14 +60,6 @@
       "note": "UA-xxxxxxxxx-x"
     },
     {
-      "name": "search",
-      "label": "是否需要搜索功能",
-      "group": "搜索",
-      "value": true,
-      "type": "switch",
-      "note": ""
-    },
-    {
       "name": "Santa",
       "label": "是否需要圣诞装饰",
       "group": "特殊功能",
