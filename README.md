@@ -31,8 +31,12 @@ Gridea-theme bitcron-pro
 21、无法加载的图片自动替换成404  
 22、发布时间过长的文章增加提示   
 23、文章目录贴边显示  
+24、特殊功能支持——圣诞特效
   
 ### 更新
+  
+**2019.12.25**  
+1、添加圣诞特效  
   
 **2019.12.13**  
 1、文章右侧添加文章目录  
@@ -75,8 +79,12 @@ Based on original version add these changes:
 21、Replace broken picture with 404 picture  
 22、Add prompt for article released for a long time  
 23、Add toc  
+24、Special feature - Christmas features
 
 ### Update
+  
+**2019.12.25**  
+1、Special feature - Christmas features
   
 **2019.12.13**  
 1、Add toc
@@ -93,7 +101,12 @@ Based on original version add these changes:
   
 # Sponsors
 \*诗 - 赞赏1元  
+兔子翻书 - 赞赏10元  
+感谢你们对本项目的支持！！！
   
 # Renderings
 ![首页](https://github.com/qyxtim/bitcron-pro/blob/master/index.png?raw=true)
 ![内容页](https://github.com/qyxtim/bitcron-pro/blob/master/article.png?raw=true)
+  
+# Contact  
+Email: admin@blinkstar.cn
