@@ -35,6 +35,9 @@ Gridea-theme bitcron-pro
   
 ### 更新
   
+**2020.1.4**  
+1、修复暗黑模式bug  
+  
 **2019.12.25**  
 1、添加圣诞特效  
   
@@ -82,6 +85,9 @@ Based on original version add these changes:
 24、Special feature - Christmas features
 
 ### Update
+  
+**2020.1.4**  
+1、Fix bug in dark mode
   
 **2019.12.25**  
 1、Special feature - Christmas features
