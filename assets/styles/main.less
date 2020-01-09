@@ -103,13 +103,32 @@ a:hover,a:active {
 .hljs-strong {
 	font-weight:bold
 }
-.toc-container {
-	position:fixed;
-	top:32px;
-	width:200px;
-	right:32px;
-	font-size:12px;
+.toc {
+    overflow-y: auto;
+    width: 200px;
+    height: auto;
+    z-index: 98;
+    background-color: rgba(255, 255, 255, 0);
+    transform: translateX(0);
+    right: calc((100% - 950px - 250px) / 2);
+    position: fixed !important;
+    top: 100px;
+    position: absolute;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+.toc > .markdownIt-TOC {
+    overflow: hidden;
+    position: relative
+}
+.toc > .markdownIt-TOC li {
+    list-style: none
+}
+.markdownIt-TOC {
+    margin: 0;
+    padding-left: 10px
+}
+
 @media (max-width:1150px) {
 	.toc-container {
 	display:none;
