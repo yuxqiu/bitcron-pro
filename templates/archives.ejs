@@ -45,7 +45,17 @@
   </div>
 <% }); %>
 </div>
-
+<div class="paginator pager pagination">
+  <div class="paginator_container pagination_container">
+<%if(pagination.prev){%>
+<a href="<%= pagination.prev %>" class="btn pre newer-posts newer_posts" style="margin-left:6%"> Newer Posts </a>
+<%}%>
+<%if(pagination.next){%>
+	  <a href="<%= pagination.next %>" class="btn next older-posts older_posts" style="margin-right:6%"> Older Posts </a>
+<%}%>
+<div style="clear:both;height:0;"></div>
+</div>
+</div>
 
 
       </div>
