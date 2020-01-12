@@ -35,6 +35,11 @@ Gridea-theme bitcron-pro
   
 ### 更新
     
+**2020.1.12**  
+1、修复赞赏码显示异常问题  
+2、修复某些链接在新标签页打开的问题  
+3、归档页添加上下页链接
+    
 **2020.1.9**  
 1、优化目录显示效果，支持自适应  
   
@@ -88,6 +93,11 @@ Based on original version add these changes:
 24、Special feature - Christmas features
 
 ### Update
+  
+**2020.1.12**  
+1、Fix the display of reward button  
+2、Fix the bug of opening some link in new tab  
+3、Add "prev posts" and "new posts" links in archives  
   
 **2020.1.9**  
 1、Optimize the display of table of content  
