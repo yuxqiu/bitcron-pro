@@ -168,7 +168,7 @@ imgList.forEach(img => {
   div.appendChild(img)
   div1.appendChild(figuration)}
 })
-$('img').on('error',function(){$(this).prop('src','<%= themeConfig.domain %>/media/images/broken.jpg')});$("a").attr("rel","external nofollow");$("a[rel='external nofollow']").attr("target","_blank");$("a[href^='#']").removeAttr("target");$("a.ex").removeAttr("rel");$("a.ex").removeAttr("target");
+$('img').on('error',function(){$(this).prop('src','<%= themeConfig.domain %>/media/images/broken.jpg')});$(".md_block a").attr("rel","external nofollow");$("a[rel='external nofollow']").attr("target","_blank");$("a[href^='#']").removeAttr("target");$("a.ex").removeAttr("rel");$("a.ex").removeAttr("target");
 content="<div class='warn'>本文最后更新于<%= post.dateFormat %>，已超过 1 年没有更新，涉及的内容可能已经失效！</div>";var date1="<%= post.date %>";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
 $('#pjax-container').lightGallery({
     selector: '.back'
