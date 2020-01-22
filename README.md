@@ -31,9 +31,12 @@ Gridea-theme bitcron-pro
 21、无法加载的图片自动替换成404  
 22、发布时间过长的文章增加提示   
 23、文章目录贴边显示  
-24、特殊功能支持——圣诞特效
+24、特殊功能支持——圣诞特效、春节特效
   
 ### 更新
+     
+**2020.1.22**  
+1、增加春节灯笼特效(感谢果核剥壳)  
     
 **2020.1.12**  
 1、修复赞赏码显示异常问题  
@@ -47,7 +50,7 @@ Gridea-theme bitcron-pro
 1、修复暗黑模式bug  
   
 **2019.12.25**  
-1、添加圣诞特效  
+1、添加圣诞特效(感谢ant design)  
   
 **2019.12.13**  
 1、文章右侧添加文章目录  
@@ -94,6 +97,9 @@ Based on original version add these changes:
 
 ### Update
   
+**2020.1.22**  
+1、Add Spring festival feature(thank 果核剥壳)
+  
 **2020.1.12**  
 1、Fix the display of reward button  
 2、Fix the bug of opening some link in new tab  
@@ -106,7 +112,7 @@ Based on original version add these changes:
 1、Fix bug in dark mode
   
 **2019.12.25**  
-1、Special feature - Christmas features
+1、Special feature - Christmas features(thank ant design)  
   
 **2019.12.13**  
 1、Add toc
