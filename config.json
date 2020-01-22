@@ -66,6 +66,14 @@
       "value": true,
       "type": "switch",
       "note": "雪花以及圣诞老人效果"
+    },
+    {
+      "name": "Spring",
+      "label": "是否需要春节灯笼特效",
+      "group": "特殊功能",
+      "value": true,
+      "type": "switch",
+      "note": "春节灯笼特效"
     }
   ]
 }
