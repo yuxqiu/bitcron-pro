@@ -5,7 +5,7 @@ Gridea-theme bitcron-pro
 
 基于[云中君](https://shanbu.fun)的bitcron主题进行修改[原主题链接](https://github.com/alterfang/gridea-theme-bitcron)  
 
-[中文版本](#English_version) | [English version](#English_version)
+[中文版本](#中文版本) | [English version](#English_version)
 
 ---
 
