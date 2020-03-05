@@ -5,7 +5,11 @@ Gridea-theme bitcron-pro
 
 基于[云中君](https://shanbu.fun)的bitcron主题进行修改[原主题链接](https://github.com/alterfang/gridea-theme-bitcron)  
 
-[English version](#English_version)
+[中文版本](#English_version) | [English version](#English_version)
+
+---
+
+## 中文版本
 
 基于原版添加了以下内容：  
 1、图片灯箱  
@@ -67,6 +71,11 @@ Gridea-theme bitcron-pro
 2、在主页文章添加文章字数显示  
 3、更换文章页面字数显示的小图标  
 4、修复赞赏码显示问题
+
+
+### 如何使用
+
+把 bitcron-pro 文件夹放入 `C:/Users/Star/Documents/Gridea/themes` 【默认文件夹】或者手动修改过的网站源文件文件夹。
 
 ---
 
@@ -132,6 +141,13 @@ Based on original version add these changes:
 2、Add word number support in home page
 3、Replace icon in post page  
 4、Fix display of donate qrcode
+
+
+### How to use
+
+Put bitcron-pro folder in `C:/Users/Star/Documents/Gridea/themes` [the default folder] or manually modified site source file path.
+
+---
 
 # Sponsors
 \*诗 - 赞赏1元  
