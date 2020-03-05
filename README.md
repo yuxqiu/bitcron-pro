@@ -4,9 +4,9 @@ Gridea-theme bitcron-pro
 [我的博客](https://blog.blinkstar.cn) 
 
 基于[云中君](https://shanbu.fun)的bitcron主题进行修改[原主题链接](https://github.com/alterfang/gridea-theme-bitcron)  
-  
+
 [English version](#English_version)
-  
+
 基于原版添加了以下内容：  
 1、图片灯箱  
 2、底部添加“重拾写作的乐趣”  
@@ -32,9 +32,12 @@ Gridea-theme bitcron-pro
 22、发布时间过长的文章增加提示   
 23、文章目录贴边显示  
 24、特殊功能支持——圣诞特效、春节特效
-  
+
 ### 更新
-     
+
+**2020.3.5**  
+1、修复 Telegram 图标不显示的问题  
+
 **2020.1.22**  
 1、增加春节灯笼特效(感谢果核剥壳)  
     
@@ -45,30 +48,30 @@ Gridea-theme bitcron-pro
     
 **2020.1.9**  
 1、优化目录显示效果，支持自适应  
-  
+
 **2020.1.4**  
 1、修复暗黑模式bug  
-  
+
 **2019.12.25**  
 1、添加圣诞特效(感谢ant design)  
-  
+
 **2019.12.13**  
 1、文章右侧添加文章目录  
-  
+
 **2019.12.8**  
 1、增加图片灯箱效果  
 2、删除Pjax效果，因为对一些js不兼容
-  
+
 **2019.11.28**  
 1、修复 pjax bug  
 2、在主页文章添加文章字数显示  
 3、更换文章页面字数显示的小图标  
 4、修复赞赏码显示问题
-  
+
 ---
-  
+
 ## English_version
-  
+
 Based on original version add these changes:  
 1、Add picture light box effect  
 2、Add “重拾写作的乐趣” at the footer  
@@ -96,45 +99,48 @@ Based on original version add these changes:
 24、Special feature - Christmas features
 
 ### Update
-  
+
+**2020.3.5**  
+1、Fix the problem of not showing telegram icon  
+
 **2020.1.22**  
 1、Add Spring festival feature(thank 果核剥壳)
-  
+
 **2020.1.12**  
 1、Fix the display of reward button  
 2、Fix the bug of opening some link in new tab  
 3、Add "prev posts" and "new posts" links in archives  
-  
+
 **2020.1.9**  
 1、Optimize the display of table of content  
-  
+
 **2020.1.4**  
 1、Fix bug in dark mode
-  
+
 **2019.12.25**  
 1、Special feature - Christmas features(thank ant design)  
-  
+
 **2019.12.13**  
 1、Add toc
-  
+
 **2019.12.8**  
 1、Add support for picture light box  
 2、Cancel Pjax function because it doesn't support some js
-  
+
 **2019.11.28**  
 1、Fix pjax bug  
 2、Add word number support in home page
 3、Replace icon in post page  
 4、Fix display of donate qrcode
-  
+
 # Sponsors
 \*诗 - 赞赏1元  
 兔子翻书 - 赞赏10元  
 感谢你们对本项目的支持！！！
-  
+
 # Renderings
 ![首页](https://github.com/qyxtim/bitcron-pro/blob/master/index.png?raw=true)
 ![内容页](https://github.com/qyxtim/bitcron-pro/blob/master/article.png?raw=true)
-  
+
 # Contact  
 Email: admin@blinkstar.cn
