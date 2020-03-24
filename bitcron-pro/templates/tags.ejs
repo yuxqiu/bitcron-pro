@@ -1,39 +1,18 @@
-
+<!DOCTYPE html>
 <html>
-  <head lang="zh">
- <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
-
-  </head>
-
-  <body>
+<head>
+<%- include('./_blocks/head', { siteTitle: `Tags | ${themeConfig.siteName}` }) %>
+<link rel="canonical" href="<%= themeConfig.domain %>/tags" />  
+</head>
+<body>
 <%- include('./_blocks/header') %>
-    <div class="main" id="pjax-container">
-      <div class="main-inner">
-
-
-<div class="content">
-  <div class="list_with_title">
-
- <div class="tags-container"><% tags.forEach((tag) => { %>
-            <a class="tag" href="<%= tag.link %>"><%= tag.name %></a>
-          <% }); %>
- </div>
- 
-
-
-
-
-  </div>
-
-</div>
-
-
-
-      </div>
-
-    </div>
-
+<div class="main"><div class="main-inner"><div class="content"><div class="list_with_title">
+<div class="tags-container"><% tags.forEach((tag, index) => { %>
+<a class="tag" id="tag-<%=index%>" href="<%= tag.link %>"><%= tag.name %></a>
+<% if (index == tags.length - 1) { %> <script>var global_tags_random = <%=index%></script> <% } %>
+<% }); %>
+<script>function getColor(){var re="#";for(var xunhuan=0;xunhuan<3;xunhuan++){var temp=Math.floor(256*Math.random());temp=temp.toString(16);if(temp.length!==2){temp="0"+temp}re+=temp}return re}for(xunhuan=0;xunhuan<global_tags_random;xunhuan++){var temp=document.getElementById("tag-"+xunhuan.toString());temp.style.backgroundColor=getColor()}</script>
+</div></div></div></div></div>
 <%- include('./_blocks/footer') %>
 </body>
-
 </html>

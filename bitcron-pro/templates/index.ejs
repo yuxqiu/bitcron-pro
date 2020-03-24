@@ -1,92 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head lang="zh">
-  <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
-  </head>
-
-  <body>
+<head>
+<%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
+<link rel="canonical" href="<%= themeConfig.domain %>" /> 
+</head>
+<body>
 <%- include('./_blocks/header') %>
-
-    <div class="main" id="pjax-container">
-      <div class="main-inner">
-
+<div class="main">
+<div class="main-inner">
 <div class="content">
-
-
-
-
-
-
-  <div class="post_list" >
+<div class="post_list" ><div class="round-shape-one"></div>
 <% posts.forEach(function(post) { %>
-	
 <div class="post">
-  <div class="post_title weaklink">
-    <h2><a href="<%= post.link %>" ><%= post.title %></a>
-    </h2>
-  </div>
-  <div class="post_content markdown"><div class="p_part"><p><%- post.abstract %></p></div></div>
-  <a class="pure-button" href="<%= post.link %>">Read More >>> </a>
-  <div class="post_footer">
-<div class="info weaklink">
-	<i class="fa fa-calendar">
-	</i>
-	<span class="date_info">
-		<%=post.dateFormat%>
-	</span>
-	<i class="fa fa-bookmark-o">
-	</i>
-	<span class="tags_info weaklink">
-		<%post.tags.forEach(function(tag){%>
-			<a href="<%= tag.link %>" class="tag">
-				<%=tag.name%>
-			</a>
-			<%});%>
-	</span>
-	<i class="fa fa-anchor">
-	</i>
-	<span class="weaklink" style="margin-right:15px;">
-		<%=post.stats.words%>
-			字
-	</span>
-	<i class="fa fa-clock-o">
-	</i>
-	<span class="weaklink" style="margin-right:15px;">
-		<%=post.stats.text%>
-	</span>
+<%if(post.isTop){ %><div style="right:0;top:0;position:absolute"><div style="background-color: #f6e05e;font-size: .55rem;color: #000;padding-left: .5rem;padding-right: .5rem;border-bottom-left-radius: .5rem;">TOP</div></div><%}%>
+<div class="post_title weaklink">
+<h2><a href="<%= post.link %>" ><%= post.title %></a>
+</h2>
 </div>
-
-  </div>
-
-</div>
-	
-<% }); %>	
-
-<div class="paginator pager pagination" >
-	
-  <div class="paginator_container pagination_container">
-	  
-	    <% if (pagination.prev) { %>
-	  <a href="<%= pagination.prev %>"  class="btn pre newer-posts newer_posts"> Newer Posts </a>
-		<% } %>								
-										
-	  <% if (pagination.next) { %>
-	  <a href="<%= pagination.next %>"  class="btn next older-posts older_posts"> Older Posts </a>
-<% } %>
-
-
-    <div style="clear:both;height:0;"></div>
-
-
-  </div>
-
+<div class="post_content markdown"><div class="p_part"><p><%- post.abstract %></p></div></div>
+<div class="post_footer">
+<section class="info weaklink"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"><%=post.dateFormat%></span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:13px"><%post.tags.forEach(function(tag, index){%><a href="<%= tag.link %>"class="tag"><%=tag.name%></a><% if (index !== post.tags.length - 1) { %>| <% } %><%});%></span><i class="iconfont icon-caret-down"></i><span class="weaklink"style="margin-right:20px;"><%=post.stats.words%>字</span><i class="iconfont icon-naozhong"></i><span class="weaklink"style="margin-right:15px;"><%=post.stats.text%></span></section></div></div><% }); %>
+<div class="round-shape-one"></div><div class="paginator pager pagination"><div class="paginator_container pagination_container"><%if(pagination.prev){%><a href="<%= pagination.prev %>"class="btn pre newer-posts newer_posts">Newer Posts</a><%}%><%if(pagination.next){%><a href="<%= pagination.next %>"class="btn next older-posts older_posts">Older Posts</a><%}%><div style="clear:both;height:0;"></div></div></div>
 </div>
 </div>
-  </div>
 </div>
-
-    </div>
+</div>
 <%- include('./_blocks/footer') %>
 </body>
-
 </html>

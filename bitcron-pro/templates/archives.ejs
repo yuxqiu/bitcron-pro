@@ -1,67 +1,15 @@
-
+<!DOCTYPE html>
 <html>
-  <head lang="zh">
-   <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
-  </head>
-
-  <body>
+<head>
+<%- include('./_blocks/head', { siteTitle: `Archives | ${themeConfig.siteName}`} ) %>
+</head>
+<body>
 <%- include('./_blocks/header') %>
-
-
-    <div class="main" id="pjax-container">
-      <div class="main-inner">
-
-
-<div class="content">
-	<% let years = []; posts.forEach((item) => { const year = item.date.substring(0, 4); if (!years.includes(year)) { years.push(year); } }); %>
-	<% years.forEach(function(year) { %>
-  <div class="list_with_title">
-
-    <div class="listing_title"><%- year %></div>
-
-	  
-    <div class="listing">
-      <div class="listing-item">
-		  <% posts.forEach(function(post) { %>
-                                <%if (post.date.indexOf(year) !== -1) { %>
-        <div class="listing_post"><a href="<%= post.link %>" title="<%= post.title %>" ><%= post.title %></a>
-
-          <div class="post_date"><span class="date"><%= post.dateFormat %></span>
-
-          </div>
-
-        </div>
- <% } %>
-                            <% }); %>
-      </div>
-
-
-		
-		
-		
-    </div>
-
-
-  </div>
-<% }); %>
-</div>
-<div class="paginator pager pagination">
-  <div class="paginator_container pagination_container">
-<%if(pagination.prev){%>
-<a href="<%= pagination.prev %>" class="btn pre newer-posts newer_posts" style="margin-left:6%"> Newer Posts </a>
-<%}%>
-<%if(pagination.next){%>
-	  <a href="<%= pagination.next %>" class="btn next older-posts older_posts" style="margin-right:6%"> Older Posts </a>
-<%}%>
-<div style="clear:both;height:0;"></div>
-</div>
-</div>
-
-
-      </div>
-
-    </div>
- <%- include('./_blocks/footer') %>
+<div class="main"><div class="main-inner"><div class="content"><div class="round-shape-one"></div>
+<% let years = []; posts.forEach((item) => { const year = item.date.substring(0, 4); if (!years.includes(year)) { years.push(year); } }); %>
+<% years.forEach(function(year) { %>
+<div class="list_with_title"><div class="listing_title"><%- year %></div><div class="listing"><div class="listing-item"><%posts.forEach(function(post){%><%if(post.date.indexOf(year)!==-1){%><div class="listing_post"><a href="<%= post.link %>"title="<%= post.title %>"><%=post.title%></a><div class="post_date"><span class="date"><%=post.dateFormat%></span></div></div><%}%><%});%></div><br></div><% }); %></div><div style="width:100%;overflow:hidden">
+<%if(pagination.prev){%><div style="float:left;text-align:left;width:50%;"><a href="<%= pagination.prev %>"class="btn pre newer-posts newer_posts">Prev Page</a></div><%}%><%if(pagination.next){%><div style="float:right;text-align:right;width:50%;"><a href="<%= pagination.next %>"class="btn next older-posts older_posts">Next Page</a></div><%}%></div></div></div></div>
+<%- include('./_blocks/footer') %>
 </body>
-
 </html>

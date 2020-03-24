@@ -1,50 +1,6 @@
-   <div class="footer">
-<div class="site_footer_wrap"><div class="site_footer">
-
-      <div class="mysocials"><div class="my_socials">
-		   <% ['telegram', 'twitter', 'weibo', 'github', 'envelope', 'rss'].forEach((item) => { %>
-			   <% if (site.customConfig[item]) { %>
-<a href="<%= site.customConfig[item] %>" title="<%= item %>"><i class="fa fa-<%= item %>"></i></a>
-<% } %>
-    <% }) %>
-</div>
-      </div>
-
-      <div class="copyright" id="copyright">
-	  <script>
-		var date=new Date;
-		var year=date.getFullYear(); 
-		document.write("Copyright © "+year+" " + "<%= themeConfig.siteName %>. ");
-		</script>
-		Powered by Gridea.
-		<br>
-		本站已稳定运行了
-		<strong><script type="text/javascript">
-		var urodz= new Date("10/28/2018");
-		var now = new Date();
-		var ile = now.getTime() - urodz.getTime();
-		var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
-		document.write(+dni)
-		</script>
-		</strong>天
-		<br>
-		本站总访问量为 <strong><span id="busuanzi_value_site_uv"></span></strong> 次
-	  <%- themeConfig.footerInfo %>
-      </div>
-	  <img src="<%= themeConfig.domain %>/media/images/font.svg">
-
-    </div>
-
-<script type="text/javascript" src="<%= themeConfig.domain %>/media/scripts/love.js"></script>
-<script type="text/javascript" src="<%= themeConfig.domain %>/media/scripts/darkmode.js"></script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"><%['telegram','twitter','weibo','github','envelope','rss'].forEach((item)=>{%><%if(site.customConfig[item]){%><a href="<%= site.customConfig[item] %>"title="<%= item %>"><i class="iconfont icon-<%= item %>"></i></a><%}%><%})%></div></div><div class="copyright"id="copyright"><%-themeConfig.footerInfo%>Copyright © 2018-2020 <a href="<%= themeConfig.domain %>" style="margin:0;">Serence</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong><%=site.posts.length%></strong> posts</span></div></div>
 <script>
-new Darkmode({label: '🌓',backgroundColor: '#f7f7f7',time: '0.5s'}).showWidget();
-console.clear();
 console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
 </script>
-<script>
-hljs.initHighlightingOnLoad();
-</script>
-<% if (site.customConfig.Santa) { %>
-<script type="text/javascript">(function($){$.fn.snow=function(options){var $flake=$('<div id="snowbox" />').css({'position':'absolute','z-index':'9999','top':'-50px'}).html('❄'),documentHeight=$(document).height(),documentWidth=$(document).width(),defaults={minSize:10,maxSize:20,newOn:1000,flakeColor:"#AFDAEF"},options=$.extend({},defaults,options);var interval=setInterval(function(){var startPositionLeft=Math.random()*documentWidth-100,startOpacity=0.5+Math.random(),sizeFlake=options.minSize+Math.random()*options.maxSize,endPositionTop=documentHeight-200,endPositionLeft=startPositionLeft-500+Math.random()*500,durationFall=documentHeight*10+Math.random()*5000;$flake.clone().appendTo('body').css({left:startPositionLeft,opacity:startOpacity,'font-size':sizeFlake,color:options.flakeColor}).animate({top:endPositionTop,left:endPositionLeft,opacity:0.2},durationFall,'linear',function(){$(this).remove()})},options.newOn)}})(jQuery);$(function(){$.fn.snow({minSize:5,maxSize:20,newOn:300})});</script>
-<% } %>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>

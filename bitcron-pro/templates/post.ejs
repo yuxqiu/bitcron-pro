@@ -1,190 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head lang="zh">
-  <%- include('./_blocks/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
-  </head>
-  <body>
- <%- include('./_blocks/header') %>
-
-    <div class="main" id="pjax-container">
-      <div class="main-inner">
-<div class="content">
-<div class="post_page" >
-<div class="post">
-  <div class="post_title sm_margin">
-    <h2><a><%= post.title %></a>
-    </h2>
-  </div>
-<script>
-function lan(){
-	if (document.getElementById("lan").innerText == "繁"){
-		var s=document.getElementById("tongwenlet_cn");
-		if(s != null){
-		document.body.removeChild(s);
-		}
-		var s = document.createElement("script");
-		s.language = "javascript";
-		s.type = "text/javascript";
-		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_tw.js";
-		s.id = "tongwenlet_cn";
-		document.body.appendChild(s);
-		document.getElementById("lan").innerHTML = "简"
-	}
-	else if(document.getElementById("lan").innerText == "簡"){
-		var s=document.getElementById("tongwenlet_cn");
-		if(s != null){
-		document.body.removeChild(s);
-		}
-		var s = document.createElement("script");
-		s.language = "javascript";
-		s.type = "text/javascript";
-		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_cn.js";
-		s.id = "tongwenlet_cn";
-		document.body.appendChild(s);
-		document.getElementById("lan").innerHTML = "繁"
-		}
-}
-
-function change(){	
-    var rand = Math.random()*1+1;
-    var num = window.getComputedStyle(document.getElementsByName("show")[0],undefined).fontSize;
-	num = num.slice(0,-2); 
-    document.getElementById("show").style.fontSize = num - rand +'px';
-}
-</script>
-  <div class="post_details">
-    <div class="info"><i class="fa fa-calendar"></i>
-<span class="date_info"><%= post.dateFormat %></span>
-<i class="fa fa-eye"></i>
-<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
-<i class="fa fa-bookmark-o"></i>
-<span class="tags_info weaklink">
-	<% post.tags.forEach(function(tag) { %>
-	<a href="<%= tag.link %>" class="tag"><%= tag.name %></a>
-<% }); %>
-</span>
-<i class="fa fa-anchor"></i>
-<span style="margin-right:15px">
-<%=post.stats.words %>字
-</span>
-<i class="fa fa-clock-o"></i>
-<span style="margin-right:15px">
-<%=post.stats.text %>
-</span>
-<span style="margin-right:15px">
-<i class="fa fa-share"></i>
-<a title="QR code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<%= post.link %>"><i class="fa fa-qrcode"></i></a>
-<a title="qq share" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<%= post.link %>&sharesource=qzone&title=<%= post.title %>&pics=https://blog.blinkstar.cn/images/avatar.png&summary=<%= post.abstract %>"><i class="fa fa-qq"></i></a>
-<a title="weibo share" target="_blank" href="https://service.weibo.com/share/share.php?url=<%= post.link %>&sharesource=weibo&title=<%= post.title%> + " - " + <%= post.abstract %>&pic="https://blog.blinkstar.cn/images/avatar.png"><i class="fa fa-weibo"></i></a>
-</span>
-<span style="margin-right:15px">
-<a id="daxiao" href="javascript:void(0);" onclick="change();" title="调整字体大小"><i class="fa fa-font"></i></a>
-</span>
-<span style="margin-right:15px">
-<a id="lan" href="javascript:void(0);" onclick="lan();" title="调整简繁体">繁</a>
-</span>
-</div>
-  </div>
-
-    <div class="post_content markdown">
-	<% if (themeConfig.showFeatureImage && post.feature) { %>
-	<div style="background-image: url('<%= post.feature %>');background-repeat: no-repeat;background-size:100% auto;margin-top:32px;padding-bottom: 50%;"></div>
-	<% } else { %>
-	<img id="mememe" alt="featureimg" src="//source.unsplash.com/800x400/?arts,weather">
-	<% } %>
-    <div name="show" id="show">
-	<p class="md_block"><span class="md_line md_line_start md_line_end"><%- post.content %></span></p></div><div id = "warn"></div>
-	<br>
-	<hr>
-<div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/"><%= themeConfig.siteName %></a>创作</div>	
-<div style="color: #ccc;font-size:14px;"><i class="fa fa-cc"></i>该文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处！</div>
-<div style="color: #ccc;font-size:14px;"><i class="fa fa-clock-o"></i>发布时间为：<%= post.dateFormat %></div>    
-<div class="reward"><div class="reward-button">赏 <span class="reward-code"> <span class="alipay-code"> <img class="alipay-img" alt = "support" src="<%= themeConfig.domain %>/media/images/alipay.png"><b>支付宝扫码打赏</b> </span> <span class="wechat-code"> <img alt ="support" class="wechat-img" src="<%= themeConfig.domain %>/media/images/wechat.png"><b>微信打赏</b> </span> </span></div></div>
-<div style="text-align:center;color: #ccc;font-size:14px;">如果觉得这篇文章对您有帮助，可以请作者喝一杯饮料哦🥤</div>    
-</div>
-</div>
-
-<style type="text/css">
-#mememe {
-	border:3px;
-	border-radius:5px;
-    background-repeat: no-repeat;
-    height: 100%;
-	width: 100%;
-	display: inline-block;
-	border-radius:5px; 
-}
-</style>
-
-<div style="width:100%;overflow:hidden">
-<% if (post.nextPost && !post.hideInList) { %>
-          <div style="float:right;text-align:right;color:#ccc;font-size:18px;width:50%;">
-            下一篇
-            <a href="<%= post.nextPost.link %>">
-              <p class="post-title">
-                <b><%= post.nextPost.title %></b>
-              </p>
-            </a>
-          </div>
+<head>
+<%- include('./_blocks/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
+<link rel="canonical" href="<%= post.link %>" />
+</head>
+<body>
+<%- include('./_blocks/header') %>
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a><%= post.title %></a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> <%= post.dateFormat %></span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px"><% post.tags.forEach(function(tag, index) { %>	<a href="<%= tag.link %>" class="tag"><%= tag.name %></a><% if (index !== post.tags.length - 1) { %> | <% } %><%});%></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px"><%= post.stats.words %>字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px"><%= post.stats.text %></span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+<%if(post.isTop){ %><font color=7D26CD>置顶</font><%}%></section>
+<% if (themeConfig.showFeatureImage && post.feature) { %>
+<img class="featureImg" alt="featureimg" src="<%= post.feature %>" referrerpolicy="no-referrer">
 <% } %>
-
-<% if (post.prevPost && !post.hideInList) { %>
-          <div style="float:left;text-align:left;color:#ccc;font-size:18px;width:50%;">
-            上一篇
-            <a href="<%= post.prevPost.link %>">
-              <p class="post-title">
-                <b><%= post.prevPost.title %></b>
-              </p>
-            </a>
-          </div>
-<% } %>
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<%- post.content %>
+<span id="footnote"></span>
+<div id = "warn"></div>
 </div>
-
+<div class="toc-container"><%- post.toc %></div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
 <div class="doc_comments">
 <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
-          <% if (commentSetting.commentPlatform === 'gitalk') { %>
-			<div id="gitalk-container"></div>
-            <%- include('./_blocks/gitalk') %>
-          <% } %>
-			  
-          <% if (commentSetting.commentPlatform === 'disqus') { %>
-            <%- include('./_blocks/disqus') %>
-          <% } %>
-        <% } %>
-</div>
-<script>
-var link="";$("img").each((i,o)=>{var o=$(o);if(o.attr("src").indexOf("sinaimg")>0||o.attr("src").indexOf("qpic")>0||o.attr("src").indexOf("baidu")>0||o.attr("src").indexOf("sinaimg")>0){o.attr("referrerpolicy","no-referrer");link=o.attr("src");o.attr("src",link);}});
-imgList = document.querySelectorAll('.md_block img')
-imgList.forEach(img => {
-  if (img.alt !== "logo" && img.alt !== "featureimg"){
-  let div1 = document.createElement('div')
-  let div = document.createElement('div')
-  div.className='back';
-  div.setAttribute("data-src",img.src)
-  var figuration = document.createElement("figcaption")
-  figuration.innerHTML = '<a href="' + img.src + '">' + img.alt + '</a>'
-  img.replaceWith(div1)
-  div1.appendChild(div)
-  div.appendChild(img)
-  div1.appendChild(figuration)}
-})
-$('img').on('error',function(){$(this).prop('src','<%= themeConfig.domain %>/media/images/broken.jpg')});$(".md_block a").attr("rel","external nofollow");$("a[rel='external nofollow']").attr("target","_blank");$("a[href^='#']").removeAttr("target");$("a.ex").removeAttr("rel");$("a.ex").removeAttr("target");
-content="<div class='warn'>本文最后更新于<%= post.dateFormat %>，已超过 1 年没有更新，涉及的内容可能已经失效！</div>";var date1="<%= post.date %>";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
-$('#pjax-container').lightGallery({
-    selector: '.back'
-});
+	  <% if (commentSetting.commentPlatform === 'gitalk') { %>
+		<div id="gitalk-container"></div>
+		<%- include('./_blocks/gitalk') %>
+	  <% } %>
+		  
+	  <% if (commentSetting.commentPlatform === 'disqus') { %>
+		<%- include('./_blocks/disqus') %>
+	  <% } %>
+<% } %>
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var list=document.querySelectorAll(".katex");for(var i=0;i<list.length;i++){list[i].style.display="unset"};
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+content="本文最后更新于<%= post.dateFormat %>，已超过 1 年没有更新，涉及的内容可能已经失效！";var date1="<%= post.date %>";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
 </script>
-  </div>
-</div>
-
-
-      </div>
-<div class="toc">
-<%- post.toc %>
-</div>
-    </div>
-	
+<style>#magnifyImg{position:fixed;left:0;top:0;text-align:center;width:100%;display:none;z-index:9999}#magnifyImg img{object-fit:contain;background:#eaecef;padding:15px;border-radius:10px;height:auto;width:auto;vertical-align:middle}</style>
 <%- include('./_blocks/footer') %>
+<script type="text/javascript" async src="<%= themeConfig.domain %>/media/js/prism.js"></script>
 </body>
-
 </html>

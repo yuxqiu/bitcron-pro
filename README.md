@@ -1,49 +1,47 @@
-# bitcron-pro
-Gridea-theme bitcron-pro
-
+# Bitcron-pro
 [我的博客](https://blog.blinkstar.cn) 
 
-基于[云中君](https://shanbu.fun)的bitcron主题进行修改[原主题链接](https://github.com/alterfang/gridea-theme-bitcron)  
+基于[云中君](https://shanbu.fun)的bitcron主题进行修改 -> [原主题链接](https://github.com/alterfang/gridea-theme-bitcron)  
 
 [中文版本](#中文版本) | [English version](#English_version)
 
 ---
 
+## 全新 2.0 Bitcron-pro 上线
+
 ## 中文版本
 
 基于原版添加了以下内容：  
-1、图片灯箱  
-2、底部添加“重拾写作的乐趣”  
-3、点击爱心特效  
-4、网站运行时间计算（如果要看怎么改运行时间可以参考[这篇文章](https://blog.blinkstar.cn/post/beautifyblog/) ）  
-5、阅读时间以及文章字数计算  
-6、toc目录支持——在Gridea内@[toc]即可  
-7、头像旋转特效  
-8、暗黑模式  
-9、添加更多的社交样式  
-10、网站总访问量统计  
-11、版权说明  
-12、繁简体转换  
-13、字体缩小  
-14、Katex支持（详情可以查看[这篇文章](https://blog.blinkstar.cn/post/katex/)）  
-15、增加显示封面的功能[注：如果没有设置封面图默认会使用unsplash图片]  
-16、搜索功能（感谢[云中君](https://shanbu.fun)；详情可参考[这篇文章](https://github.com/alterfang/bolg/issues/5);可在设置里选择关闭)  
-17、文章内上下篇显示  
-18、微信、百度等防盗链解除（注：在微信X5内核浏览器等一些浏览器无效；实测Chrome下正常）  
-19、代码高亮  
-20、添加图片简介  
-21、无法加载的图片自动替换成404  
-22、发布时间过长的文章增加提示   
-23、文章目录贴边显示  
-24、特殊功能支持——圣诞特效、春节特效
+1、图片放大  
+2、阅读时间以及文章字数计算  
+3、toc目录支持  
+4、暗黑模式  
+5、添加更多的社交样式  
+6、网站总访问量统计  
+7、繁简体转换  
+8、Katex支持（详情可以查看[这篇文章](https://blog.blinkstar.cn/post/katex/)）  
+9、增加显示封面的功能  
+10、搜索功能（采用了[Gridea-search 开源项目]( https://github.com/tangkaichuan/gridea-search )）  
+11、代码高亮  
+12、添加图片简介  
+……
+
+
+
+还有一些小细节等待发现……
+
+
 
 ### 更新
+
+**2020.3.24**  
+1、上传 Bitcron-pro 2.0 版本  
 
 **2020.3.5**  
 1、修复 Telegram 图标不显示的问题  
 
 **2020.1.22**  
-1、增加春节灯笼特效(感谢果核剥壳)  
+1、增加春节灯笼特效  
     
 **2020.1.12**  
 1、修复赞赏码显示异常问题  
@@ -83,37 +81,35 @@ Gridea-theme bitcron-pro
 
 Based on original version add these changes:  
 1、Add picture light box effect  
-2、Add “重拾写作的乐趣” at the footer  
-3、Add mouse click special effects  
-4、Count website run time  
-5、Count reading time and word number  
-6、Add toc [table of contents] support  
-7、Add rotation effect in avatar  
-8、add dark mode  
-9、Add more social media icon at footer  
-10、Add website visits counting  
-11、Add copyright statement at every article  
-12、Add support for transforming from simplified Chinese to traditional Chinese  
-13、Add support for decreasing font size  
-14、Add support for Katex  
-15、Add article cover picture  
-16、Add search service  
-17、Add    
-18、Address anti-stealing-link of some pictures by Baidu and Wechat  
-19、Highlight code  
-20、Add alt below the picture  
-21、Replace broken picture with 404 picture  
-22、Add prompt for article released for a long time  
-23、Add toc  
-24、Special feature - Christmas features
+2、Count reading time and word number  
+3、Add toc [table of contents] support  
+4、add dark mode  
+5、Add more social media icon at footer  
+6、Add website visits counting  
+7、Add support for transforming from simplified Chinese to traditional Chinese  
+8、Add support for Katex  
+9、Add article cover picture  
+10、Add search service  
+11、Highlight code  
+12、Add prompt for article released for a long time  
+...
+
+
+
+There are some small details to discover...
+
+
 
 ### Update
+
+**2020.3.24**  
+1、Upload Bitcron-pro 2.0    
 
 **2020.3.5**  
 1、Fix the problem of not showing telegram icon  
 
 **2020.1.22**  
-1、Add Spring festival feature(thank 果核剥壳)
+1、Add Spring festival feature
 
 **2020.1.12**  
 1、Fix the display of reward button  
@@ -154,9 +150,16 @@ Put bitcron-pro folder in `C:/Users/Star/Documents/Gridea/themes` [the default f
 兔子翻书 - 赞赏10元  
 感谢你们对本项目的支持！！！
 
+---
+
 # Renderings
-![首页](https://github.com/qyxtim/bitcron-pro/blob/master/index.png?raw=true)
-![内容页](https://github.com/qyxtim/bitcron-pro/blob/master/article.png?raw=true)
+![首页](https://cdn.jsdelivr.net/gh/qyxtim/bitcron-pro@master/images/index.png)
+
+![内容页](https://cdn.jsdelivr.net/gh/qyxtim/bitcron-pro@master/images/darkmode.png)
+
+![暗黑模式](https://cdn.jsdelivr.net/gh/qyxtim/bitcron-pro@master/images/darkmode.png)
+
+---
 
 # Contact  
 Email: admin@blinkstar.cn
