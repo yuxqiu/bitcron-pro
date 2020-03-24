@@ -155,7 +155,7 @@ Put bitcron-pro folder in `C:/Users/Star/Documents/Gridea/themes` [the default f
 # Renderings
 ![首页](https://cdn.jsdelivr.net/gh/qyxtim/bitcron-pro@master/images/index.png)
 
-![内容页](https://cdn.jsdelivr.net/gh/qyxtim/bitcron-pro@master/images/darkmode.png)
+![内容页](https://cdn.jsdelivr.net/gh/qyxtim/bitcron-pro@master/images/post.png)
 
 ![暗黑模式](https://cdn.jsdelivr.net/gh/qyxtim/bitcron-pro@master/images/darkmode.png)
 
