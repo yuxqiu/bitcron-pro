@@ -21,7 +21,7 @@
 7、繁简体转换  
 8、Katex支持（详情可以查看[这篇文章](https://blog.blinkstar.cn/post/katex/)）  
 9、增加显示封面的功能  
-10、搜索功能（采用了[Gridea-search 开源项目]( https://github.com/tangkaichuan/gridea-search )）  
+10、搜索功能（采用了[Gridea-search 开源项目]( https://github.com/tangkaichuan/gridea-search )，注：需要 Gridea 版本在 9.0 以上才可以正常使用）  
 11、代码高亮  
 12、添加图片简介  
 ……
@@ -33,6 +33,9 @@
 
 
 ### 更新
+
+**2020.4.5**  
+1、修复底部网站信息显示不正确的问题  
 
 **2020.3.24**  
 1、上传 Bitcron-pro 2.0 版本  
@@ -89,7 +92,7 @@ Based on original version add these changes:
 7、Add support for transforming from simplified Chinese to traditional Chinese  
 8、Add support for Katex  
 9、Add article cover picture  
-10、Add search service  
+10、Add search service(Pay attention: Using this feature, Gridea version must > 9.0)  
 11、Highlight code  
 12、Add prompt for article released for a long time  
 ...
@@ -101,6 +104,9 @@ There are some small details to discover...
 
 
 ### Update
+
+**2020.4.5**  
+1、Fix the footer problem  
 
 **2020.3.24**  
 1、Upload Bitcron-pro 2.0    
