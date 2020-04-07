@@ -34,6 +34,9 @@
 
 ### 更新
 
+**2020.4.7**  
+1、修复网站标题为中文时显示异常  
+
 **2020.4.5**  
 1、修复底部网站信息显示不正确的问题  
 
@@ -104,6 +107,9 @@ There are some small details to discover...
 
 
 ### Update
+
+**2020.4.7**  
+1、Fix display problem when using Chinese as site title
 
 **2020.4.5**  
 1、Fix the footer problem  
