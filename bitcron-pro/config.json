@@ -66,6 +66,14 @@
       "value": true,
       "type": "switch",
       "note": " 春节灯笼特效 "
-    }
+    },
+	{
+		"name": "ga",
+		"label": "跟踪 ID",
+		"group": "谷歌统计",
+		"value": "",
+		"type": "input",
+		"note": "UA-xxxxxxxxx-x"
+	}
   ]
 }

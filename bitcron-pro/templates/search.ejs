@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<% if (site.customConfig.close) { %>
-<%- include('./_blocks/repair') %>
-<% } else { %><html>
+<html>
 <head>
     <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
     <script src="/media/gridea-search/fuse.js"></script>
@@ -26,4 +24,4 @@
     </div>
     <%- include('./_blocks/footer') %>
 </body>
-</html><% } %>
+</html>
