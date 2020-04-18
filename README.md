@@ -28,57 +28,68 @@
 
 
 
-还有一些小细节等待发现……
-
-
-
 ### 更新
 
-**2020.4.17**  
+<details>
+<summary><b>2020.4.17</b></summary>
+<pre>
+<ul>
 1、添加 google analytics  
-2、修复`search.ejs`中的问题    
+2、修复search.ejs中的问题
+</ul>
+</pre>
+</details>
 
-**2020.4.7**  
-1、修复网站标题为中文时显示异常  
+<details>
+<summary><b>2020.4.7</b></summary>
+<pre>
+<ul>
+1、修复网站标题为中文时显示异常
+</ul>
+</pre>
+</details>
 
-**2020.4.5**  
-1、修复底部网站信息显示不正确的问题  
+<details>
+<summary><b>2020.4.5</b></summary>
+<pre>
+<ul>
+1、修复底部网站信息显示不正确的问题
+</ul>
+</pre>
+</details>
 
-**2020.3.24**  
-1、上传 Bitcron-pro 2.0 版本  
+<details>
+<summary><b>2020.3.24</b></summary>
+<pre>
+<ul>
+1、上传 Bitcron-pro 2.0 版本
+</ul>
+</pre>
+</details>
 
-**2020.3.5**  
+<details>
+<summary><b>Bitcron 2.0 前</b></summary>
+<pre>
+<ul>
 1、修复 Telegram 图标不显示的问题  
+2、增加春节灯笼特效  
+3、修复赞赏码显示异常问题  
+4、修复某些链接在新标签页打开的问题  
+5、归档页添加上下页链接
+6、优化目录显示效果，支持自适应  
+7、修复暗黑模式bug  
+8、添加圣诞特效(感谢ant design)  
+9、文章右侧添加文章目录  
+10、增加图片灯箱效果  
+11、删除Pjax效果，因为对一些js不兼容
+12、修复 pjax bug  
+13、在主页文章添加文章字数显示  
+14、更换文章页面字数显示的小图标  
+15、修复赞赏码显示问题
+</ul>
+</pre>
+</details>
 
-**2020.1.22**  
-1、增加春节灯笼特效  
-    
-**2020.1.12**  
-1、修复赞赏码显示异常问题  
-2、修复某些链接在新标签页打开的问题  
-3、归档页添加上下页链接
-    
-**2020.1.9**  
-1、优化目录显示效果，支持自适应  
-
-**2020.1.4**  
-1、修复暗黑模式bug  
-
-**2019.12.25**  
-1、添加圣诞特效(感谢ant design)  
-
-**2019.12.13**  
-1、文章右侧添加文章目录  
-
-**2019.12.8**  
-1、增加图片灯箱效果  
-2、删除Pjax效果，因为对一些js不兼容
-
-**2019.11.28**  
-1、修复 pjax bug  
-2、在主页文章添加文章字数显示  
-3、更换文章页面字数显示的小图标  
-4、修复赞赏码显示问题
 
 
 ### 如何使用
@@ -89,70 +100,84 @@
 
 ## English_version
 
-Based on original version add these changes:  
-1、Add picture light box effect  
-2、Count reading time and word number  
-3、Add toc [table of contents] support  
-4、add dark mode  
-5、Add more social media icon at footer  
-6、Add website visits counting  
-7、Add support for transforming from simplified Chinese to traditional Chinese  
-8、Add support for Katex  
-9、Add article cover picture  
-10、Add search service(Pay attention: Using this feature, Gridea version must > 9.0)  
-11、Highlight code  
-12、Add prompt for article released for a long time  
+Based on original version add these changes:
+1、Add picture light box effect
+2、Count reading time and word number
+3、Add toc [table of contents] support
+4、add dark mode
+5、Add more social media icon at footer
+6、Add website visits counting
+7、Add support for transforming from simplified Chinese to traditional Chinese
+8、Add support for Katex
+9、Add article cover picture
+10、Add search service(Pay attention: Using this feature, Gridea version must > 9.0)
+11、Highlight code
+12、Add prompt for article released for a long time
 ...
-
-
-
-There are some small details to discover...
-
 
 
 ### Update
 
-**2020.4.7**  
+<details>
+<summary><b>2020.4.17</b></summary>
+<pre>
+<ul>
+1、添加 google analytics  
+2、修复search.ejs中的问题
+</ul>
+</pre>
+</details>
+
+<details>
+<summary><b>2020.4.7</b></summary>
+<pre>
+<ul>
 1、Fix display problem when using Chinese as site title
+</ul>
+</pre>
+</details>
 
-**2020.4.5**  
-1、Fix the footer problem  
+<details>
+<summary><b>2020.4.5</b></summary>
+<pre>
+<ul>
+1、Fix the footer problem
+</ul>
+</pre>
+</details>
 
-**2020.3.24**  
-1、Upload Bitcron-pro 2.0    
+<details>
+<summary><b>2020.3.24</b></summary>
+<pre>
+<ul>
+1、Upload Bitcron-pro 2.0
+</ul>
+</pre>
+</details>
 
-**2020.3.5**  
-1、Fix the problem of not showing telegram icon  
+<details>
+<summary><b>Before Bitcron 2.0</b></summary>
+<pre>
+<ul>
+1、Fix the problem of not showing telegram icon
+2、Add Spring festival feature
+3、Fix the display of reward button
+4、Fix the bug of opening some link in new tab
+5、Add "prev posts" and "new posts" links in archives
+6、Optimize the display of table of content 
+7、Fix bug in dark mode
+8、Special feature - Christmas features(thank ant design)
+9、Add toc
+10、Add support for picture light box
+11、Cancel Pjax function because it doesn't support some js
+12、Fix pjax bug
+13、Add word number support in home page
+14、Replace icon in post page
+15、Fix display of donate qrcode
+</ul>
+</pre>
+</details>
 
-**2020.1.22**  
-1、Add Spring festival feature
-
-**2020.1.12**  
-1、Fix the display of reward button  
-2、Fix the bug of opening some link in new tab  
-3、Add "prev posts" and "new posts" links in archives  
-
-**2020.1.9**  
-1、Optimize the display of table of content  
-
-**2020.1.4**  
-1、Fix bug in dark mode
-
-**2019.12.25**  
-1、Special feature - Christmas features(thank ant design)  
-
-**2019.12.13**  
-1、Add toc
-
-**2019.12.8**  
-1、Add support for picture light box  
-2、Cancel Pjax function because it doesn't support some js
-
-**2019.11.28**  
-1、Fix pjax bug  
-2、Add word number support in home page
-3、Replace icon in post page  
-4、Fix display of donate qrcode
 
 
 ### How to use
