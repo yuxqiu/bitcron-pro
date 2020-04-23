@@ -31,6 +31,16 @@
 ### 更新
 
 <details>
+<summary><b>2020.4.23</b></summary>
+<pre>
+<ul>
+1、修复 footer 中 icon 显示问题 
+2、增加知乎 icon
+</ul>
+</pre>
+</details>
+
+<details>
 <summary><b>2020.4.17</b></summary>
 <pre>
 <ul>
@@ -117,6 +127,16 @@ Based on original version add these changes:
 
 
 ### Update
+
+<details>
+<summary><b>2020.4.23</b></summary>
+<pre>
+<ul>
+1、Fix icon display in footer 
+2、Add zhihu icon
+</ul>
+</pre>
+</details>
 
 <details>
 <summary><b>2020.4.17</b></summary>
