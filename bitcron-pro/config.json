@@ -20,6 +20,14 @@
       "note": "链接地址"
     },
     {
+      "name": "zhihu",
+      "label": "知乎",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
       "name": "weibo",
       "label": "微博",
       "group": "社交",
@@ -28,7 +36,7 @@
       "note": "链接地址"
     },
     {
-      "name": "send-o",
+      "name": "telegram",
       "label": "Telegram",
       "group": "社交",
       "value": "",
