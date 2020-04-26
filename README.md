@@ -31,6 +31,15 @@
 ### 更新
 
 <details>
+<summary><b>2020.4.26</b></summary>
+<pre>
+<ul>
+1、模块化 `main.less` 
+</ul>
+</pre>
+</details>
+
+<details>
 <summary><b>2020.4.23</b></summary>
 <pre>
 <ul>
@@ -127,6 +136,15 @@ Based on original version add these changes:
 
 
 ### Update
+
+<details>
+<summary><b>2020.4.26</b></summary>
+<pre>
+<ul>
+1、Modularize `main.less` 
+</ul>
+</pre>
+</details>
 
 <details>
 <summary><b>2020.4.23</b></summary>
