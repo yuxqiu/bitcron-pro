@@ -1,0 +1,41 @@
+.toc-container .markdownIt-TOC {
+    position: sticky;
+    top: 32px;
+    width: 250px;
+    font-size: 12px;
+    list-style: none;
+    padding-left: 0
+}
+.toc-container .markdownIt-TOC:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8px;
+    bottom: 0;
+    width: 1px;
+    opacity: .5
+}
+.toc-container ul {
+    list-style: none
+}
+.toc-container li {
+    padding-left: 16px
+}
+.toc-container li a {
+    color: #868e96;
+    padding: 4px;
+    display: block;
+    transition: all .3s
+}
+.toc-container li a:hover {
+    background: #fafafa
+}
+.toc-container li a.current {
+    color: #006cff;
+    background: #fafafa
+}
+.currentToc {
+    background-color: white !important;
+    color: red !important;
+    border-radius: 5px
+}

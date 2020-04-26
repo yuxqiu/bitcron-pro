@@ -1,0 +1,81 @@
+.darkmode .darkmode-layer {
+    position: fixed;
+    pointer-events: none;
+    background: #fff !important;
+    mix-blend-mode: difference;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out
+}
+.darkmode .darkmode-background {
+    background: #fff !important;
+    position: fixed;
+    pointer-events: none;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0
+}
+.darkmode .gs_md_bdy {
+    background: #000 !important
+}
+.darkmode .gs_md_hdr {
+    background: #000 !important
+}
+.darkmode .search-input {
+    background: #000 !important;
+    border-bottom-color: inherit
+}
+.darkmode img {
+    mix-blend-mode: difference;
+    filter: grayscale(30%)
+}
+.darkmode pre {
+    background-color: #000 !important
+}
+.darkmode .line-number {
+    color: #c1c1c1
+}
+.darkmode .hidden_nav {
+    background-color: #000 !important;
+    box-shadow: 0 10px 20px 0
+}
+.darkmode .katex {
+    color: #c1c1c1
+}
+.switch_default[type=checkbox] {
+    display: none
+}
+.switch_default + label {
+    background-color: #e6e6e6 !important;
+    border-radius: 7px;
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    position: relative;
+    box-shadow: .2px .2px 1px .5px #b4b4b4;
+    width: 30px
+}
+.switch_default + label:after {
+    background-color: #fff !important;
+    border-radius: 50%;
+    content: "";
+    height: 12px;
+    left: 1px;
+    position: absolute;
+    top: .5px;
+    width: 12px;
+    box-shadow: .2px .2px 1px .5px #b4b4b4
+}
+.switch_default:checked + label {
+    background-color: #1abc9c !important;
+    box-shadow: none
+}
+.switch_default:checked + label:after {
+    left: 17px
+}
