@@ -31,6 +31,15 @@
 ### 更新
 
 <details>
+<summary><b>2020.7.6</b></summary>
+<pre>
+<ul>
+1、修复一个小bug
+</ul>
+</pre>
+</details>
+
+<details>
 <summary><b>2020.4.26</b></summary>
 <pre>
 <ul>
@@ -136,6 +145,15 @@ Based on original version add these changes:
 
 
 ### Update
+
+<details>
+<summary><b>2020.7.6</b></summary>
+<pre>
+<ul>
+1、Fix a bug
+</ul>
+</pre>
+</details>
 
 <details>
 <summary><b>2020.4.26</b></summary>
