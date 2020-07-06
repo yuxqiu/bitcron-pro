@@ -11,7 +11,7 @@
 <a class="tag" id="tag-<%=index%>" href="<%= tag.link %>"><%= tag.name %></a>
 <% if (index == tags.length - 1) { %> <script>var global_tags_random = <%=index%></script> <% } %>
 <% }); %>
-<script>function getColor(){var re="#";for(var xunhuan=0;xunhuan<3;xunhuan++){var temp=Math.floor(256*Math.random());temp=temp.toString(16);if(temp.length!==2){temp="0"+temp}re+=temp}return re}for(xunhuan=0;xunhuan<global_tags_random;xunhuan++){var temp=document.getElementById("tag-"+xunhuan.toString());temp.style.backgroundColor=getColor()}</script>
+<script>function getColor(){var re="#";for(var xunhuan=0;xunhuan<3;xunhuan++){var temp=Math.floor(256*Math.random());temp=temp.toString(16);if(temp.length!==2){temp="0"+temp}re+=temp}return re}for(xunhuan=0;xunhuan<=global_tags_random;xunhuan++){var temp=document.getElementById("tag-"+xunhuan.toString());temp.style.backgroundColor=getColor()}</script>
 </div></div></div></div></div>
 <%- include('./_blocks/footer') %>
 </body>
