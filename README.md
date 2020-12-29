@@ -128,19 +128,19 @@
 
 ## English_version
 
-Based on original version add these changes:
-1、Add picture light box effect
-2、Count reading time and word number
-3、Add toc [table of contents] support
-4、add dark mode
-5、Add more social media icon at footer
-6、Add website visits counting
-7、Add support for transforming from simplified Chinese to traditional Chinese
-8、Add support for Katex
-9、Add article cover picture
-10、Add search service(Pay attention: Using this feature, Gridea version must > 9.0)
-11、Highlight code
-12、Add prompt for article released for a long time
+Based on original version add these changes:  
+1、Add picture light box effect  
+2、Count reading time and word number  
+3、Add toc [table of contents] support  
+4、add dark mode  
+5、Add more social media icon at footer  
+6、Add website visits counting  
+7、Add support for transforming from simplified Chinese to traditional Chinese  
+8、Add support for Katex  
+9、Add article cover picture  
+10、Add search service(Pay attention: Using this feature, Gridea version must > 9.0)  
+11、Highlight code  
+12、Add prompt for article released for a long time  
 ...
 
 
