@@ -3,7 +3,7 @@
 
 基于[云中君](https://shanbu.fun)的bitcron主题进行修改 -> [原主题链接](https://github.com/alterfang/gridea-theme-bitcron)  
 
-[English version](.\README-en.md)
+[English version](https://github.com/qyxtim/bitcron-pro/blob/master/README-en.md)
 
 ## 全新 2.0 Bitcron-pro 上线
 
