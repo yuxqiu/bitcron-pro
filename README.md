@@ -25,6 +25,16 @@
 ## 更新
 
 <details>
+<summary><b>2021.7.6</b></summary>
+<pre>
+<ul>
+1、修复模糊搜索的bug
+2、修复katex渲染bug
+</ul>
+</pre>
+</details>
+
+<details>
 <summary><b>2020.7.6</b></summary>
 <pre>
 <ul>

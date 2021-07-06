@@ -22,6 +22,16 @@ Add these changes based on original version:
 ## Update
 
 <details>
+<summary><b>2021.7.6</b></summary>
+<pre>
+<ul>
+1、Fix fuzzy search bug
+2、Fix katex rendering bug
+</ul>
+</pre>
+</details>
+
+<details>
 <summary><b>2020.7.6</b></summary>
 <pre>
 <ul>
