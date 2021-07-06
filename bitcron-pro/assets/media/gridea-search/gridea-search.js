@@ -31,24 +31,41 @@ function ajax(obj) {
     }
 }
 
-//模糊搜索
+//模糊搜索 https://github.com/krisk/fuse
 function fuzzySearch(data, phrase) {
-    var options = {
-        shouldSort: true,
-        includeMatches: true,
-        threshold: 0.5,
-        location: 0,
-        distance: 1000,
-        maxPatternLength: 32,
-        minMatchCharLength: 1,
-        keys: [
-            'title',
-            'content'
-        ]
-    };
-    var fuse = new Fuse(data, options);
-    var fuzzyResult = fuse.search(phrase);
-    return fuzzyResult;
+	var phrase_len = phrase.length;
+	var min_len = 4;
+	var max_len = 32;
+	//根据搜索的词数决定匹配大小，最小匹配词数不能大于词数，最大匹配词数不能小于词数
+	if(phrase_len<4){
+		min_len = phrase_len;
+	}
+	if(phrase_len<=0){
+		min_len = 99999999;
+		max_len = 99999999;
+	}
+	if(phrase_len>32){
+		max_len = phrase_len;
+	}
+
+	var options = {
+		shouldSort: true,
+		includeMatches: true,
+		threshold: 0.5,// 匹配算法阈值。阈值为0.0需要完全匹配（字母和位置），阈值为1.0将匹配任何内容。
+		location: 0,// 确定文本中预期找到的模式的大致位置。
+		distance: 1000,
+		maxPatternLength: max_len, // 模式的最大长度
+		minMatchCharLength: min_len, // 模式的最小字符长度
+		// 搜索标题与内容
+		keys: [
+			'title',
+			'content',
+			'tags.name'
+		]
+	};
+	var fuse = new Fuse(data, options);
+	var fuzzyResult = fuse.search(phrase);
+	return fuzzyResult;
 }
 
 //检查缓存是否最新
