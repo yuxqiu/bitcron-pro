@@ -1,6 +1,4 @@
 # Bitcron-pro
-[我的博客](https://blog.blinkstar.cn) 
-
 基于[云中君](https://shanbu.fun)的bitcron主题进行修改 -> [原主题链接](https://github.com/alterfang/gridea-theme-bitcron)  
 
 [English version](https://github.com/qyxtim/bitcron-pro/blob/master/README-en.md)
@@ -126,17 +124,9 @@
 
 把 bitcron-pro 文件夹放入 `C:/Users/$YourUserName$/Documents/Gridea/themes` 【默认文件夹】或者手动修改过的网站源文件文件夹。
 
-## Sponsors
-\*诗  
-兔子翻书  
-感谢你们对本项目的支持！
-
 ## Renderings
 ![首页](https://cdn.jsdelivr.net/gh/qyxtim/bitcron-pro@master/images/index.png)
 
 ![内容页](https://cdn.jsdelivr.net/gh/qyxtim/bitcron-pro@master/images/post.png)
 
 ![暗黑模式](https://cdn.jsdelivr.net/gh/qyxtim/bitcron-pro@master/images/darkmode.png)
-
-## Contact  
-Email: admin@blinkstar.cn
